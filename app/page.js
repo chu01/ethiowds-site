@@ -10,8 +10,7 @@ export default function Home() {
       <Hero />
       <ColorShowcase />
       
-      {/* Additional sections will go here */}
-      <section style={{ padding: '4rem 0', textAlign: 'center' }}>
+      <section style={{ padding: '4rem 0', textAlign: 'center', background: '#f8f9fa' }}>
         <div className="container">
           <h2>More Components Coming Soon</h2>
           <p>Buttons, forms, navigation, and more Ethiopian-styled components</p>

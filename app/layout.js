@@ -1,4 +1,4 @@
-import { Inter } from '@next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.scss'
 
 const inter = Inter({ 
@@ -13,14 +13,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en">
       <head>
         <link 
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" 
           rel="stylesheet" 
         />
       </head>
-      <body>
+      <body className={inter.className}>
         {children}
       </body>
     </html>
