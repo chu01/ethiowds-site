@@ -1,0 +1,78 @@
+@use '../../globals.scss' as *;
+
+.color-showcase {
+  padding: 4rem 0;
+  background: white;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: $primary;
+}
+
+.section-description {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.color-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  .color-swatch {
+    height: 120px;
+  }
+  
+  .color-info {
+    padding: 1.5rem;
+    background: white;
+    
+    .color-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .color-variable {
+      font-family: 'Monaco', 'Consolas', monospace;
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .color-value {
+      font-family: 'Monaco', 'Consolas', monospace;
+      color: #999;
+      font-size: 0.9rem;
+    }
+  }
+  
+  // Color classes
+  &.primary .color-swatch { background: $primary; }
+  &.secondary .color-swatch { background: $secondary; }
+  &.green .color-swatch { background: $ethio-green; }
+  &.yellow .color-swatch { background: $ethio-yellow; }
+  &.red .color-swatch { background: $ethio-red; }
+  &.blue .color-swatch { background: $ethio-blue; }
+}

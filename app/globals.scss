@@ -1,0 +1,40 @@
+// Custom EthioWDS variables - override before import
+$primary: #2E86AB;
+$secondary: #FF6B6B;
+$ethio-green: #1B5E20;
+$ethio-yellow: #FFC107;
+$ethio-red: #C2185B;
+$ethio-blue: #1976D2;
+$font-family-sans: 'Inter', 'Noto Sans Ethiopic', system-ui, sans-serif;
+
+// Import EthioWDS
+@use '../node_modules/@abiyub/ethiowds/src/styles/ethio-wds' as *;
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-sans;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// Utility classes
+.text-primary { color: $primary; }
+.bg-primary { background: $primary; }
+.text-amharic { font-family: 'Noto Sans Ethiopic', $font-family-sans; }
