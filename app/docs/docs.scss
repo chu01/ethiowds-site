@@ -1,0 +1,22 @@
+.docs-layout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .docs-main {
+    flex: 1;
+    margin-left: 280px; // Sidebar width
+  }
+  
+  .docs-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  // Responsive design
+  @media (max-width: 768px) {
+    .docs-main {
+      margin-left: 0;
+    }
+  }

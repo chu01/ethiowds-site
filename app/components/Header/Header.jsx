@@ -12,11 +12,11 @@ export default function Header() {
           </Link>
           
           <nav className="nav">
-            <Link href="#colors">Colors</Link>
-            <Link href="#components">Components</Link>
-            <Link href="#usage">Usage</Link>
-            <Link href="#get-started" className="nav-button">
-              Get Started
+            <Link href="/docs">Documentation</Link>
+            <Link href="/docs/components/buttons">Components</Link>
+            <Link href="/docs/colors">Colors</Link>
+            <Link href="https://github.com/chu01/ethiowds" className="nav-button">
+              GitHub
             </Link>
           </nav>
         </div>
