@@ -46,7 +46,7 @@ The site will automatically reload when you make changes to the source code.
 ## 📁 Project Structure
 
 ```
-ethiowds-website/
+ethiowds-site/
 ├── app/                    # Next.js App Router
 │   ├── components/         # Reusable components
 │   │   ├── Header/        # Site header
