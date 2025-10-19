@@ -1,4 +1,7 @@
-// Custom EthioWDS variables - override before import
+// Import EthioWDS CSS
+@import '@abiyub/ethiowds/dist/css/ethio-wds.css';
+
+// Your custom variables and overrides
 $primary: #2E86AB;
 $secondary: #FF6B6B;
 $ethio-green: #1B5E20;
@@ -7,34 +10,92 @@ $ethio-red: #C2185B;
 $ethio-blue: #1976D2;
 $font-family-sans: 'Inter', 'Noto Sans Ethiopic', system-ui, sans-serif;
 
-// Import EthioWDS
-@use '../node_modules/@abiyub/ethiowds/src/styles/ethio-wds' as *;
-
-// Global styles
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+// Button styles (matching USWDS style)
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 0.375rem;
   font-family: $font-family-sans;
-  line-height: 1.6;
-  color: #333;
-  background: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+
+  &-primary {
+    background: $primary;
+    color: white;
+    border-color: $primary;
+
+    &:hover {
+      background: darken($primary, 10%);
+      border-color: darken($primary, 10%);
+    }
+  }
+
+  &-secondary {
+    background: $secondary;
+    color: white;
+    border-color: $secondary;
+
+    &:hover {
+      background: darken($secondary, 10%);
+      border-color: darken($secondary, 10%);
+    }
+  }
+
+  &-outline {
+    background: transparent;
+    color: $primary;
+    border-color: $primary;
+
+    &:hover {
+      background: $primary;
+      color: white;
+    }
+  }
+
+  &-lg {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  &-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
 }
 
+// Container utility
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-// Utility classes
-.text-primary { color: $primary; }
-.bg-primary { background: $primary; }
-.text-amharic { font-family: 'Noto Sans Ethiopic', $font-family-sans; }
+// Your custom styles
+body {
+  font-family: $font-family-sans;
+  line-height: 1.6;
+  color: #1b1b1b;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}

@@ -5,37 +5,54 @@ export default function Hero() {
     <section className="hero">
       <div className="container">
         <div className="hero-content">
-          <h1 className="hero-title">
-            Build Ethiopian Digital Experiences
-            <span className="amharic-subtitle">ኢትዮጵያዊ ዲጂታል ተሞክሮዎችን ይገንቡ</span>
-          </h1>
-          
-          <p className="hero-description">
-            EthioWDS is a comprehensive design system for Ethiopian government websites, 
-            providing consistent, accessible, and beautiful components built with Ethiopian identity.
-          </p>
-          
-          <div className="hero-actions">
-            <button className="btn btn-primary">
-              Get Started
-            </button>
-            <button className="btn btn-secondary">
-              View Components
-            </button>
+          <div className="hero-text">
+            <h1 className="hero-title">
+              Build better Ethiopian digital experiences
+            </h1>
+            <p className="hero-description">
+              EthioWDS is an open-source design system for the Ethiopian government. 
+              Create accessible, mobile-friendly, and consistent websites and applications 
+              with Ethiopian identity.
+            </p>
+            <div className="hero-actions">
+              <a href="/docs/getting-started" className="button button-primary button-lg">
+                Get started
+              </a>
+              <a href="/docs/components" className="button button-outline button-lg">
+                View components
+              </a>
+            </div>
+            <div className="hero-meta">
+              <span className="version">Latest version: 1.2.0</span>
+              <a href="https://github.com/abiyub/ethiowds" className="github-link">
+                View on GitHub
+              </a>
+            </div>
           </div>
-          
-          <div className="hero-stats">
-            <div className="stat">
-              <div className="stat-number">50+</div>
-              <div className="stat-label">Components</div>
-            </div>
-            <div className="stat">
-              <div className="stat-number">100%</div>
-              <div className="stat-label">Accessible</div>
-            </div>
-            <div className="stat">
-              <div className="stat-number">∞</div>
-              <div className="stat-label">Customizable</div>
+          <div className="hero-visual">
+            <div className="component-showcase">
+              <div className="component-grid">
+                <div className="component-card">
+                  <div className="component-icon">🎨</div>
+                  <h4>Design tokens</h4>
+                  <p>Colors, typography, spacing</p>
+                </div>
+                <div className="component-card">
+                  <div className="component-icon">🧩</div>
+                  <h4>Components</h4>
+                  <p>15+ reusable components</p>
+                </div>
+                <div className="component-card">
+                  <div className="component-icon">♿</div>
+                  <h4>Accessible</h4>
+                  <p>WCAG 2.1 compliant</p>
+                </div>
+                <div className="component-card">
+                  <div className="component-icon">🇪🇹</div>
+                  <h4>Ethiopian</h4>
+                  <p>Built for Ethiopian needs</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
