@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google'
+import EthioWDSScript from './components/EthioWDSScript/EthioWDSScript'
 import './globals.scss'
 
 const inter = Inter({ 
@@ -21,6 +22,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={inter.className}>
+        {/* EthioWDS Script Loader - Client Component */}
+        <EthioWDSScript />
         {children}
       </body>
     </html>

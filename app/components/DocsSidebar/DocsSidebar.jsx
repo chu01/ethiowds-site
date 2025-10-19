@@ -33,6 +33,16 @@ export default function DocsSidebar() {
         { name: 'Alerts', href: '/docs/components/alerts' },
         { name: 'Navigation', href: '/docs/components/navigation' },
         { name: 'Layout', href: '/docs/components/layout' },
+        { name: 'Badges', href: '/docs/components/badges' },
+        { name: 'Modal', href: '/docs/components/modal' },
+        { name: 'Progress', href: '/docs/components/progress' },
+        { name: 'Tabs', href: '/docs/components/tabs' },
+        { name: 'Avatar', href: '/docs/components/avatar' },
+        { name: 'Accordion', href: '/docs/components/accordion' },
+        { name: 'Breadcrumb', href: '/docs/components/breadcrumb' },
+        { name: 'Pagination', href: '/docs/components/pagination' },
+        { name: 'Summary Box', href: '/docs/components/summary' },
+        { name: 'Search', href: '/docs/components/search' },
       ]
     },
     {

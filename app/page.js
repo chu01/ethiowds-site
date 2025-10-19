@@ -22,30 +22,25 @@ export default function Home() {
             gap: '2rem',
             marginBottom: '3rem'
           }}>
+            {/* Existing components... */}
+            
+            {/* New Components */}
             <div className="ethio-card">
               <div className="ethio-card-header">
-                <h3>Buttons</h3>
+                <h3>Accordion</h3>
               </div>
               <div className="ethio-card-body">
-                <p>Multiple button styles and sizes for all interactions.</p>
-                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '1rem' }}>
-                  <button className="ethio-btn ethio-btn-primary">Primary</button>
-                  <button className="ethio-btn ethio-btn-secondary">Secondary</button>
-                  <button className="ethio-btn ethio-btn-outline">Outline</button>
-                </div>
-              </div>
-            </div>
-
-            <div className="ethio-card">
-              <div className="ethio-card-header">
-                <h3>Cards</h3>
-              </div>
-              <div className="ethio-card-body">
-                <p>Flexible card components for content display.</p>
+                <p>Collapsible sections for organized content.</p>
                 <div style={{ marginTop: '1rem' }}>
-                  <div className="ethio-card ethio-card-primary" style={{ margin: 0 }}>
-                    <div className="ethio-card-body">
-                      <p>Example card with primary accent.</p>
+                  <div className="ethio-accordion">
+                    <div className="ethio-accordion-item">
+                      <button className="ethio-accordion-header">
+                        Quick Preview
+                        <span className="ethio-accordion-icon">▼</span>
+                      </button>
+                      <div className="ethio-accordion-content">
+                        <p>Compact information display.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -54,13 +49,33 @@ export default function Home() {
 
             <div className="ethio-card">
               <div className="ethio-card-header">
-                <h3>Forms</h3>
+                <h3>Search</h3>
               </div>
               <div className="ethio-card-body">
-                <p>Accessible form components with validation states.</p>
+                <p>Advanced search with clear functionality.</p>
                 <div style={{ marginTop: '1rem' }}>
-                  <div className="ethio-form-group">
-                    <input type="text" className="ethio-form-input" placeholder="Try me..." />
+                  <div className="ethio-search">
+                    <input type="text" className="ethio-search-input" placeholder="Try searching..." />
+                    <span className="ethio-search-icon">🔍</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="ethio-card">
+              <div className="ethio-card-header">
+                <h3>Summary Box</h3>
+              </div>
+              <div className="ethio-card-body">
+                <p>Highlight key information prominently.</p>
+                <div style={{ marginTop: '1rem' }}>
+                  <div className="ethio-summary ethio-summary-compact">
+                    <div className="ethio-summary-header">
+                      <h4 className="ethio-summary-title">Quick Stats</h4>
+                    </div>
+                    <div className="ethio-summary-content">
+                      <p>15+ components ready to use.</p>
+                    </div>
                   </div>
                 </div>
               </div>
