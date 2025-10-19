@@ -1,10 +1,10 @@
 export default function BreadcrumbPage() {
-    return (
-      <div className="docs-page">
-        <h1>Breadcrumb</h1>
-        <p className="lead">
-          Navigation component showing the current page's location within a hierarchical structure.
-        </p>
+  return (
+    <div className="docs-page">
+      <h1>Breadcrumb</h1>
+      <p className="lead">
+        Navigation component showing the current page&apos;s location within a hierarchical structure.
+      </p>
   
         <section className="docs-section">
           <h2>Basic Breadcrumb</h2>

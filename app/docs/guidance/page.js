@@ -1,10 +1,10 @@
-export default function GuidancePage() {
-    return (
-      <div className="docs-page">
-        <h1>Design Guidance</h1>
-        <p className="lead">
-          Principles, best practices, and guidelines for creating consistent, accessible Ethiopian digital experiences.
-        </p>
+export default function BreadcrumbPage() {
+  return (
+    <div className="docs-page">
+      <h1>Breadcrumb</h1>
+      <p className="lead">
+        Navigation component showing the current page&apos;s location within a hierarchical structure.
+      </p>
   
         <section className="docs-section">
           <h2>Design Principles</h2>
@@ -56,44 +56,24 @@ export default function GuidancePage() {
         </section>
   
         <section className="docs-section">
-          <h2>Content Guidelines</h2>
-          
-          <h3>Writing for Ethiopian Audiences</h3>
-          <div className="content-guidelines">
-            <div className="guideline">
-              <h4>Language Support</h4>
-              <p>Always provide content in Amharic and consider other Ethiopian languages where appropriate. Ensure proper rendering of Ethiopic script.</p>
-            </div>
-  
-            <div className="guideline">
-              <h4>Cultural Context</h4>
-              <p>Use examples and references that are relevant to Ethiopian users. Consider local customs, holidays, and cultural norms.</p>
-            </div>
-  
-            <div className="guideline">
-              <h4>Clear Communication</h4>
-              <p>Use simple, direct language. Avoid bureaucratic jargon. Write in active voice and keep sentences short and clear.</p>
-            </div>
+        <h2>Content Guidelines</h2>
+        
+        <h3>Writing for Ethiopian Audiences</h3>
+        <div className="content-guidelines">
+          <div className="guideline">
+            <h4>Clear Communication</h4>
+            <p>Use simple, direct language. Avoid bureaucratic jargon. Write in active voice and keep sentences short and clear.</p>
           </div>
-  
-          <h3>Accessibility in Content</h3>
-          <div className="content-guidelines">
-            <div className="guideline">
-              <h4>Alternative Text</h4>
-              <p>Provide meaningful alt text for all images. Describe the content and function of the image.</p>
-            </div>
-  
-            <div className="guideline">
-              <h4>Headings Structure</h4>
-              <p>Use proper heading hierarchy (h1, h2, h3, etc.) to create a logical document structure.</p>
-            </div>
-  
-            <div className="guideline">
-              <h4>Link Text</h4>
-              <p>Use descriptive link text that makes sense out of context. Avoid "click here" or "read more".</p>
-            </div>
+        </div>
+
+        <h3>Accessibility in Content</h3>
+        <div className="content-guidelines">
+          <div className="guideline">
+            <h4>Link Text</h4>
+            <p>Use descriptive link text that makes sense out of context. Avoid &quot;click here&quot; or &quot;read more&quot;.</p>
           </div>
-        </section>
+        </div>
+      </section>
   
         <section className="docs-section">
           <h2>Implementation Best Practices</h2>

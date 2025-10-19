@@ -14,15 +14,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <head>
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" 
-          rel="stylesheet" 
-        />
+        {/* Remove the Google Fonts link since we're using next/font */}
+        {/* Next.js will automatically inject the font CSS */}
       </head>
-      <body className={inter.className}>
-        {/* EthioWDS Script Loader - Client Component */}
+      <body>
         <EthioWDSScript />
         {children}
       </body>

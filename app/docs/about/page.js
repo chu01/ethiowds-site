@@ -1,8 +1,8 @@
 export default function AboutPage() {
-    return (
-      <div className="docs-page">
-        <h1>About EthioWDS</h1>
-        <p className="lead">
+  return (
+    <div className="docs-page">
+      <h1>About EthioWDS</h1>
+      <p className="lead">
           EthioWDS is an open-source design system built for the Ethiopian government to create consistent, accessible, and beautiful digital experiences.
         </p>
   

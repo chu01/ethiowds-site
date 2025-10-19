@@ -1,42 +1,25 @@
-export default function InstallationPage() {
-    return (
-      <div className="docs-page">
-        <h1>Installation</h1>
-        <p className="lead">
-          Get started with EthioWDS in your project using npm, yarn, or CDN.
-        </p>
-  
-        <section className="docs-section">
-          <h2>Package Managers</h2>
-          
-          <div className="installation-method">
-            <h3>npm</h3>
-            <pre className="code-block">npm install @abiyub/ethiowds</pre>
-          </div>
-  
-          <div className="installation-method">
-            <h3>yarn</h3>
-            <pre className="code-block">yarn add @abiyub/ethiowds</pre>
-          </div>
-  
-          <div className="installation-method">
-            <h3>pnpm</h3>
-            <pre className="code-block">pnpm add @abiyub/ethiowds</pre>
-          </div>
-        </section>
-  
-        <section className="docs-section">
-          <h2>CDN</h2>
-          <p>For quick prototyping, include EthioWDS via CDN:</p>
-          
+export default function GettingStartedPage() {
+  return (
+    <div className="docs-page">
+      <h1>Getting Started</h1>
+      <p className="lead">
+        Learn how to install and set up EthioWDS in your project in just a few minutes.
+      </p>
+
+      <section className="docs-section">
+        <h2>Quick Installation</h2>
+        
+        <div className="installation-method">
+          <h3>CDN (Quick Start)</h3>
           <pre className="code-block">
-  {`<!-- CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/@abiyub/ethiowds/dist/css/ethio-wds.css">
-  
-  <!-- JavaScript (optional) -->
-  <script src="https://unpkg.com/@abiyub/ethiowds/dist/js/ethio-wds.js"></script>`}
+{`<!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/@abiyub/ethiowds/dist/css/ethio-wds.css">
+
+<!-- JavaScript -->
+<script src="https://unpkg.com/@abiyub/ethiowds/dist/js/ethio-wds.js"></script>`}
           </pre>
-        </section>
+        </div>
+      </section>
   
         <section className="docs-section">
           <h2>Usage</h2>
