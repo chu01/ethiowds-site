@@ -1,20 +1,20 @@
-import DocsSidebar from '../components/DocsSidebar/DocsSidebar'
 import './docs.scss'
 
 export const metadata = {
-  title: 'EthioWDS Documentation',
-  description: 'Complete documentation for EthioWDS - Ethiopian Web Design System',
+  title: 'EthioWDS Documentation - Ethiopian Web Design System',
+  description: 'Comprehensive documentation for EthioWDS design system',
 }
 
 export default function DocsLayout({ children }) {
   return (
-    <div className="docs-layout">
-      <DocsSidebar />
-      <main className="docs-main">
+    <div className="container">
+      <div className="docs-layout">
+        {/* Temporarily remove DocsSidebar to fix build */}
+        <div style={{ width: '280px' }}></div>
         <div className="docs-content">
           {children}
         </div>
-      </main>
+      </div>
     </div>
   )
 }

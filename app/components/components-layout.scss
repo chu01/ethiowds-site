@@ -1,0 +1,315 @@
+.components-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    min-height: calc(100vh - 200px);
+    padding: 2rem 0;
+    
+    @media (max-width: 1024px) {
+      grid-template-columns: 240px 1fr;
+      gap: 2rem;
+    }
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding: 1rem 0;
+    }
+  }
+  
+  .components-content {
+    background: white;
+    
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  
+  // Components page styles
+  .components-page {
+    width: 100%;
+    
+    .page-header {
+      margin-bottom: 4rem;
+      
+      h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #1e293b;
+        margin-bottom: 1.5rem;
+        line-height: 1.1;
+        background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .lead {
+        font-size: 1.375rem;
+        color: #475569;
+        margin-bottom: 0;
+        line-height: 1.6;
+        font-weight: 300;
+        max-width: 800px;
+      }
+    }
+  }
+  
+  // Components grid
+  .components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .category-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border-color: #1B5E20;
+    }
+    
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      
+      .category-icon {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin: 0;
+      }
+    }
+    
+    .category-description {
+      color: #64748b;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+  }
+  
+  .components-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .component-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background: #1B5E20;
+      border-color: #1B5E20;
+      transform: translateX(4px);
+      
+      .component-info h3 {
+        color: white;
+      }
+      
+      .component-info p {
+        color: #e2e8f0;
+      }
+      
+      .component-arrow {
+        color: white;
+        transform: translateX(4px);
+      }
+    }
+    
+    .component-info {
+      flex: 1;
+      
+      h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin: 0 0 0.25rem 0;
+        transition: color 0.2s ease;
+      }
+      
+      p {
+        font-size: 0.875rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.4;
+        transition: color 0.2s ease;
+      }
+    }
+    
+    .component-arrow {
+      color: #94a3b8;
+      font-size: 1.25rem;
+      font-weight: 300;
+      transition: all 0.2s ease;
+    }
+  }
+  
+  // CTA section
+  .components-cta {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 3rem;
+    text-align: center;
+    
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      font-size: 1.125rem;
+      color: #475569;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      
+      .ethio-btn {
+        text-decoration: none;
+      }
+    }
+  }
+  
+  // Components sidebar styles
+  .components-sidebar {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 2rem 0;
+    overflow-y: auto;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    max-height: calc(100vh - 200px);
+    
+    @media (max-width: 768px) {
+      display: none;
+    }
+    
+    .sidebar-header {
+      padding: 0 1.5rem 1.5rem;
+      border-bottom: 1px solid #e2e8f0;
+      margin-bottom: 1.5rem;
+      
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin: 0;
+        line-height: 1.3;
+      }
+    }
+  
+    .sidebar-nav {
+      padding: 0 1rem;
+    }
+  
+    .sidebar-section {
+      margin-bottom: 2rem;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+    .sidebar-section-title {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #1e293b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      padding: 0 0.75rem;
+    }
+  
+    .sidebar-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .sidebar-menu-item {
+      margin-bottom: 0.5rem;
+    }
+  
+    .sidebar-link {
+      display: block;
+      padding: 0.75rem 0.75rem;
+      color: #475569;
+      text-decoration: none;
+      border-radius: 0.375rem;
+      transition: all 0.2s ease;
+      font-size: 0.875rem;
+      font-weight: 400;
+      border-left: 3px solid transparent;
+  
+      &:hover {
+        background: #e2e8f0;
+        color: #1e293b;
+        border-left-color: #cbd5e1;
+      }
+  
+      &.active {
+        background: #1B5E20;
+        color: white;
+        font-weight: 600;
+        border-left-color: #1B5E20;
+      }
+    }
+  }
+  
+  // Responsive design
+  @media (max-width: 768px) {
+    .components-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .category-card {
+      padding: 1.5rem;
+    }
+    
+    .components-cta {
+      padding: 2rem 1.5rem;
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    
+    .components-page .page-header h1 {
+      font-size: 2.5rem;
+    }
+  }

@@ -1,68 +1,92 @@
-export default function GettingStartedPage() {
+import Link from 'next/link'
+import { CodeBlock } from '../../../components/CodeBlock/CodeBlock'
+
+export default function InstallationGuide() {
   return (
-    <div className="docs-page">
-      <h1>Getting Started</h1>
-      <p className="lead">
-        Learn how to install and set up EthioWDS in your project in just a few minutes.
-      </p>
+    <div className="docs-container">
+      <div className="docs-content">
+        <h1>Installation Guide</h1>
+        <p className="lead">
+          Get EthioWDS up and running in your React project with these simple steps.
+        </p>
 
-      <section className="docs-section">
-        <h2>Quick Installation</h2>
-        
-        <div className="installation-method">
-          <h3>CDN (Quick Start)</h3>
-          <pre className="code-block">
-{`<!-- CSS -->
-<link rel="stylesheet" href="https://unpkg.com/@abiyub/ethiowds/dist/css/ethio-wds.css">
+        <div className="installation-steps">
+          <div className="installation-step">
+            <div className="step-number">1</div>
+            <div className="step-content">
+              <h3>Install Package</h3>
+              <p>Install EthioWDS using npm or yarn:</p>
+              <CodeBlock language="bash">
+                npm install ethiowds
+              </CodeBlock>
+              <CodeBlock language="bash">
+                yarn add ethiowds
+              </CodeBlock>
+            </div>
+          </div>
 
-<!-- JavaScript -->
-<script src="https://unpkg.com/@abiyub/ethiowds/dist/js/ethio-wds.js"></script>`}
-          </pre>
+          <div className="installation-step">
+            <div className="step-number">2</div>
+            <div className="step-content">
+              <h3>Import CSS</h3>
+              <p>Import the main CSS file in your application:</p>
+              <CodeBlock language="javascript">
+                {`// In your main App.js or index.js
+import 'ethiowds/dist/styles.css';`}
+              </CodeBlock>
+            </div>
+          </div>
+
+          <div className="installation-step">
+            <div className="step-number">3</div>
+            <div className="step-content">
+              <h3>Start Using Components</h3>
+              <p>Import and use components in your React components:</p>
+              <CodeBlock language="javascript">
+                {`import { Button, Input } from 'ethiowds';
+
+function MyComponent() {
+  return (
+    <div>
+      <Button variant="primary">Click me</Button>
+      <Input placeholder="Enter text..." />
+    </div>
+  );
+}`}
+              </CodeBlock>
+            </div>
+          </div>
         </div>
-      </section>
-  
-        <section className="docs-section">
-          <h2>Usage</h2>
-          
-          <h3>SCSS Import</h3>
-          <p>For full customization, import EthioWDS in your SCSS:</p>
-          <pre className="code-block">
-  {`// Import EthioWDS
-  @use '@abiyub/ethiowds' as *;
-  
-  // Optional: Customize variables
-  $primary: #2E86AB;
-  $ethio-green: #1B5E20;
-  
-  // Your custom styles
-  .my-component {
-    background: $primary;
-    color: white;
-  }`}
-          </pre>
-  
-          <h3>CSS Only</h3>
-          <p>If you're using the compiled CSS:</p>
-          <pre className="code-block">
-  {`/* Import compiled CSS */
-  @import '@abiyub/ethiowds/dist/css/ethio-wds.css';
-  
-  /* Or in your HTML */
-  <link rel="stylesheet" href="node_modules/@abiyub/ethiowds/dist/css/ethio-wds.css">`}
-          </pre>
-  
-          <h3>JavaScript Initialization</h3>
-          <pre className="code-block">
-  {`// Initialize EthioWDS
-  import EthioWDS from '@abiyub/ethiowds';
-  
-  const ethio = new EthioWDS({
-    theme: 'default',
-    language: 'am',
-    loadCSS: true
-  });`}
-          </pre>
-        </section>
+
+        <h2>Next.js Setup</h2>
+        <p>For Next.js projects, you might need to configure CSS imports:</p>
+        
+        <CodeBlock language="javascript">
+          {`// next.config.js
+const nextConfig = {
+  // ... your existing config
+  transpilePackages: ['ethiowds'],
+}
+
+module.exports = nextConfig`}
+        </CodeBlock>
+
+        <h2>Manual Setup</h2>
+        <p>If you prefer to include the CSS manually, add this to your HTML:</p>
+        
+        <CodeBlock language="html">
+          {`<link rel="stylesheet" href="path/to/ethiowds/styles.css" />`}
+        </CodeBlock>
+
+        <div className="docs-next">
+          <h3>What's Next?</h3>
+          <p>
+            Now that you have EthioWDS installed, check out the{' '}
+            <Link href="/docs/how-to-use-ethiowds">usage guide</Link> to learn how to 
+            make the most of the components and features.
+          </p>
+        </div>
       </div>
-    )
-  }
+    </div>
+  )
+}

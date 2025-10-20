@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google'
-import EthioWDSScript from './components/EthioWDSScript/EthioWDSScript'
+import EthioWDSScript from '../components/EthioWDSScript/EthioWDSScript'
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 import './globals.scss'
 
 const inter = Inter({ 
@@ -15,13 +17,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
-      <head>
-        {/* Remove the Google Fonts link since we're using next/font */}
-        {/* Next.js will automatically inject the font CSS */}
-      </head>
       <body>
         <EthioWDSScript />
-        {children}
+        <Header />
+        <main className="main-content">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   )
