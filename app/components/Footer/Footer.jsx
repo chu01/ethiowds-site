@@ -52,7 +52,7 @@ export default function Footer() {
             </p>
           </div>
           <div className="footer-meta">
-            <span>Version 1.2.0</span>
+            <span>Version 1.1.1</span>
             <span>·</span>
             <a href="/docs/license">MIT License</a>
           </div>

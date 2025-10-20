@@ -15,16 +15,16 @@ export default function Hero() {
               with Ethiopian identity.
             </p>
             <div className="hero-actions">
-              <a href="/docs/getting-started" className="button button-primary button-lg">
+              <a href="/docs" className="button button-primary button-lg">
                 Get started
               </a>
-              <a href="/docs/components" className="button button-outline button-lg">
+              <a href="/docs/components/buttons" className="button button-outline button-lg">
                 View components
               </a>
             </div>
             <div className="hero-meta">
-              <span className="version">Latest version: 1.2.0</span>
-              <a href="https://github.com/abiyub/ethiowds" className="github-link">
+              <span className="version">Latest version: 1.1.1</span>
+              <a href="https://github.com/chu01/ethiowds" className="github-link">
                 View on GitHub
               </a>
             </div>

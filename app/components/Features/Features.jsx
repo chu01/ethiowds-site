@@ -12,7 +12,7 @@ export default function Features() {
       icon: '🧩',
       title: 'Components',
       description: '15+ reusable, accessible components for faster development.',
-      link: '/docs/components'
+      link: '/docs/components/buttons'
     },
     {
       icon: '📱',
