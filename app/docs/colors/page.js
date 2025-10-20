@@ -1,4 +1,4 @@
-import ColorGrid from '../../components/ColorGrid/ColorGrid'
+import ColorGrid from '../../../components/ColorGrid/ColorGrid'
 
 export default function ColorsPage() {
   const colors = [
