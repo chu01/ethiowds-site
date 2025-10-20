@@ -21,18 +21,18 @@ export default function Footer() {
           <div className="footer-links">
             <div className="footer-section">
               <h4>Documentation</h4>
-              <a href="/docs/getting-started">Getting started</a>
-              <a href="/docs/components">Components</a>
-              <a href="/docs/design-tokens">Design tokens</a>
-              <a href="/docs/accessibility">Accessibility</a>
+              <a href="ethiowds-site/docs/getting-started">Getting started</a>
+              <a href="ethiowds-site/docs/components">Components</a>
+              <a href="ethiowds-site/docs/design-tokens">Design tokens</a>
+              <a href="ethiowds-site/docs/accessibility">Accessibility</a>
             </div>
             
             <div className="footer-section">
               <h4>Resources</h4>
               <a href="https://github.com/chu01/ethiowds">GitHub</a>
               <a href="https://npmjs.com/package/@abiyub/ethiowds">npm package</a>
-              <a href="/docs/contributing">Contributing</a>
-              <a href="/docs/changelog">Changelog</a>
+              <a href="ethiowds-site/docs/contributing">Contributing</a>
+              <a href="ethiowds-site/docs/changelog">Changelog</a>
             </div>
             
             <div className="footer-section">

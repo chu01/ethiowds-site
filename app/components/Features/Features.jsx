@@ -6,37 +6,37 @@ export default function Features() {
       icon: '🎨',
       title: 'Design tokens',
       description: 'Consistent colors, typography, and spacing built for Ethiopian digital products.',
-      link: '/docs/design-tokens'
+      link: 'ethiowds-site/docs/design-tokens'
     },
     {
       icon: '🧩',
       title: 'Components',
       description: '15+ reusable, accessible components for faster development.',
-      link: '/docs/components/buttons'
+      link: 'ethiowds-site/docs/components/buttons'
     },
     {
       icon: '📱',
       title: 'Responsive',
       description: 'Mobile-first components that work on all screen sizes.',
-      link: '/docs/layout'
+      link: 'ethiowds-site//docs/layout'
     },
     {
       icon: '♿',
       title: 'Accessible',
       description: 'Built to WCAG 2.1 standards for inclusive user experiences.',
-      link: '/docs/accessibility'
+      link: 'ethiowds-site/docs/accessibility'
     },
     {
       icon: '🇪🇹',
       title: 'Ethiopian identity',
       description: 'Colors and typography that reflect Ethiopian culture and heritage.',
-      link: '/docs/ethiopian-identity'
+      link: 'ethiowds-site/docs/ethiopian-identity'
     },
     {
       icon: '⚡',
       title: 'Fast implementation',
       description: 'Easy to install and integrate with your existing projects.',
-      link: '/docs/getting-started'
+      link: 'ethiowds-site/docs/getting-started'
     }
   ]
 
