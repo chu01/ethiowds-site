@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import PageContainer from '../PageContainer' // Adjust path as needed
+import PageContainer from '../PageContainer'
 import './Header.scss'
 
 export default function Header() {
@@ -24,10 +24,10 @@ export default function Header() {
 
           <nav className={`header-nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
             <div className="nav-main">
-              <Link href="/docs" className="nav-link">Documentation</Link>
-              <Link href="/components" className="nav-link">Components</Link>
-              <Link href="/docs/guidance" className="nav-link">Guidance</Link>
-              <Link href="/about" className="nav-link">About</Link>
+              <Link href="/docs" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Documentation</Link>
+              <Link href="/components" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Components</Link>
+              <Link href="/docs/guidance" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Guidance</Link>
+              <Link href="/about" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
             </div>
             <div className="nav-actions">
               <Link 
@@ -35,19 +35,21 @@ export default function Header() {
                 className="nav-link external"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 GitHub
               </Link>
-              <Link href="/docs" className="button button-primary">
+              <Link href="/docs" className="button button-primary" onClick={() => setIsMobileMenuOpen(false)}>
                 Get Started
               </Link>
             </div>
           </nav>
 
           <button 
-            className="mobile-menu-toggle"
+            className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
           >
             <span></span>
             <span></span>
