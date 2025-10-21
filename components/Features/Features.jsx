@@ -4,48 +4,44 @@ export default function Features() {
   const features = [
     {
       icon: '🎨',
-      title: 'Design tokens',
-      description: 'Consistent colors, typography, and spacing built for Ethiopian digital products.',
-      link: 'ethiowds-site/docs/design-tokens'
-    },
-    {
-      icon: '🧩',
-      title: 'Components',
-      description: '15+ reusable, accessible components for faster development.',
-      link: 'ethiowds-site/docs/components/buttons'
-    },
-    {
-      icon: '📱',
-      title: 'Responsive',
-      description: 'Mobile-first components that work on all screen sizes.',
-      link: 'ethiowds-site//docs/layout'
+      title: 'Ethiopian Design',
+      description: 'Built with Ethiopian colors, typography, and cultural patterns'
     },
     {
       icon: '♿',
       title: 'Accessible',
-      description: 'Built to WCAG 2.1 standards for inclusive user experiences.',
-      link: 'ethiowds-site/docs/accessibility'
+      description: 'WCAG compliant components for inclusive user experiences'
     },
     {
-      icon: '🇪🇹',
-      title: 'Ethiopian identity',
-      description: 'Colors and typography that reflect Ethiopian culture and heritage.',
-      link: 'ethiowds-site/docs/ethiopian-identity'
+      icon: '📱',
+      title: 'Responsive',
+      description: 'Works perfectly on all devices and screen sizes'
     },
     {
       icon: '⚡',
-      title: 'Fast implementation',
-      description: 'Easy to install and integrate with your existing projects.',
-      link: 'ethiowds-site/docs/getting-started'
+      title: 'Fast & Lightweight',
+      description: 'Optimized for performance with minimal bundle size'
+    },
+    {
+      icon: '🔧',
+      title: 'Easy to Use',
+      description: 'Simple integration with React, Vue, and plain HTML/CSS'
+    },
+    {
+      icon: '🌍',
+      title: 'Localized',
+      description: 'Support for Ethiopian languages and RTL layouts'
     }
   ]
 
   return (
-    <section className="features">
-      <div className="container">
+    <section className="features-section">
+      <div className="eth-container">
         <div className="features-header">
-          <h2>Everything you need to build better digital services</h2>
-          <p>EthioWDS provides the tools and guidance to create consistent, accessible, and beautiful Ethiopian digital experiences.</p>
+          <h2 className="features-title">Why Choose EthioWDS?</h2>
+          <p className="features-subtitle">
+            Built specifically for Ethiopian digital products with modern web standards
+          </p>
         </div>
         
         <div className="features-grid">
@@ -54,9 +50,6 @@ export default function Features() {
               <div className="feature-icon">{feature.icon}</div>
               <h3 className="feature-title">{feature.title}</h3>
               <p className="feature-description">{feature.description}</p>
-              <a href={feature.link} className="feature-link">
-                Learn more →
-              </a>
             </div>
           ))}
         </div>

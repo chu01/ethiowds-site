@@ -6,6 +6,7 @@ export default function Home() {
     <div className="home-page">
       <Hero />
       <Features />
+      {/* Add more full-width sections as needed */}
     </div>
   )
 }

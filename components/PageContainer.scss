@@ -1,0 +1,12 @@
+// PageContainer.scss or globals.scss
+.eth-container {
+    width: 100%;
+    max-width: 1200px; // This constrains the width
+    margin: 0 auto;
+    padding: 0 1rem;
+  
+    &--full {
+      max-width: none; // This removes the constraint
+      padding: 0;
+    }
+  }

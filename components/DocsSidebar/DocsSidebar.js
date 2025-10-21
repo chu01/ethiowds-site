@@ -15,47 +15,52 @@ export default function DocsSidebar() {
   const menuItems = [
     {
       title: 'Getting Started',
+      icon: '🚀',
       items: [
-        { name: 'Introduction', path: '/docs' },
-        { name: 'Installation', path: '/docs/installation' },
-        { name: 'Quick Start', path: '/docs/quick-start' },
-        { name: 'How to Use EthioWDS', path: '/docs/how-to-use-ethiowds' },
+        { name: 'Introduction', path: '/docs', icon: '📖' },
+        { name: 'Installation', path: '/docs/installation', icon: '📦' },
+        { name: 'Quick Start', path: '/docs/quick-start', icon: '⚡' },
+        { name: 'How to Use EthioWDS', path: '/docs/how-to-use-ethiowds', icon: '🔧' },
       ]
     },
     {
       title: 'Foundations',
+      icon: '🏗️',
       items: [
-        { name: 'Design Principles', path: '/docs/design-principles' },
-        { name: 'Colors', path: '/docs/colors' },
-        { name: 'Typography', path: '/docs/typography' },
-        { name: 'Spacing', path: '/docs/spacing' },
-        { name: 'Breakpoints', path: '/docs/breakpoints' },
+        { name: 'Design Principles', path: '/docs/design-principles', icon: '🎯' },
+        { name: 'Colors', path: '/docs/colors', icon: '🎨' },
+        { name: 'Typography', path: '/docs/typography', icon: '🔤' },
+        { name: 'Spacing', path: '/docs/spacing', icon: '📏' },
+        { name: 'Breakpoints', path: '/docs/breakpoints', icon: '📱' },
       ]
     },
     {
       title: 'Customization',
+      icon: '🎨',
       items: [
-        { name: 'Theming', path: '/docs/theming' },
-        { name: 'CSS Variables', path: '/docs/css-variables' },
-        { name: 'Custom Components', path: '/docs/custom-components' },
+        { name: 'Theming', path: '/docs/theming', icon: '🌈' },
+        { name: 'CSS Variables', path: '/docs/css-variables', icon: '💄' },
+        { name: 'Custom Components', path: '/docs/custom-components', icon: '⚙️' },
       ]
     },
     {
       title: 'Guides',
+      icon: '📚',
       items: [
-        { name: 'Accessibility', path: '/docs/accessibility' },
-        { name: 'Best Practices', path: '/docs/best-practices' },
-        { name: 'Ethiopian Localization', path: '/docs/ethiopian-localization' },
-        { name: 'Performance', path: '/docs/performance' },
+        { name: 'Accessibility', path: '/docs/accessibility', icon: '♿' },
+        { name: 'Best Practices', path: '/docs/best-practices', icon: '✅' },
+        { name: 'Ethiopian Localization', path: '/docs/ethiopian-localization', icon: '🇪🇹' },
+        { name: 'Performance', path: '/docs/performance', icon: '⚡' },
       ]
     },
     {
       title: 'Development',
+      icon: '💻',
       items: [
-        { name: 'Contributing', path: '/docs/contributing' },
-        { name: 'Code Standards', path: '/docs/code-standards' },
-        { name: 'Testing', path: '/docs/testing' },
-        { name: 'Deployment', path: '/docs/deployment' },
+        { name: 'Contributing', path: '/docs/contributing', icon: '🤝' },
+        { name: 'Code Standards', path: '/docs/code-standards', icon: '📝' },
+        { name: 'Testing', path: '/docs/testing', icon: '🧪' },
+        { name: 'Deployment', path: '/docs/deployment', icon: '🚀' },
       ]
     }
   ]
@@ -82,50 +87,78 @@ export default function DocsSidebar() {
   }
 
   return (
-    <div className="docs-sidebar">
-      <div className="sidebar-header">
-        <h3>Documentation</h3>
+    <aside className="eth-sidebar" style={{ width: '280px', flexShrink: 0 }}>
+      {/* Sidebar Header */}
+      <div className="eth-sidebar__header">
+        <div className="eth-sidebar__brand">
+          <span className="eth-sidebar__brand-text">Documentation</span>
+        </div>
       </div>
       
-      <nav className="sidebar-nav">
-        <div className="sidebar-section">
-          <ul className="sidebar-menu">
-            <li className="sidebar-menu-item">
+      {/* Sidebar Navigation */}
+      <nav className="eth-sidebar__nav">
+        {/* Overview Link */}
+        <div className="eth-sidebar__section">
+          <ul className="eth-sidebar__list">
+            <li>
               <Link 
                 href="/docs"
-                className={`sidebar-link ${isActive('/docs') && !pathname.includes('/docs/') ? 'active' : ''}`}
+                className={`eth-sidebar__item ${isActive('/docs') && !pathname.includes('/docs/') ? 'eth-sidebar__item--active' : ''}`}
               >
-                Overview
+                <span className="eth-sidebar__item-icon">📖</span>
+                <span className="eth-sidebar__item-text">Overview</span>
               </Link>
             </li>
           </ul>
         </div>
 
+        {/* Documentation Sections */}
         {menuItems.map((section, index) => {
           const isExpanded = isSectionExpanded(index)
           
           return (
-            <div key={index} className="sidebar-section">
+            <div key={index} className="eth-sidebar__section">
+              {/* Section Header */}
               <button 
-                className="sidebar-section-title"
+                className={`eth-sidebar__item ${isExpanded ? 'eth-sidebar__item--active' : ''}`}
                 onClick={() => toggleSection(index)}
                 aria-expanded={isExpanded}
+                style={{ 
+                  width: '100%', 
+                  textAlign: 'left',
+                  border: 'none',
+                  background: 'none',
+                  cursor: 'pointer'
+                }}
               >
-                {section.title}
-                <span className="section-toggle">
-                  {isExpanded ? '−' : '+'}
+                <span className="eth-sidebar__item-icon">{section.icon}</span>
+                <span className="eth-sidebar__item-text">{section.title}</span>
+                <span 
+                  className="eth-sidebar__item-chevron"
+                  style={{ 
+                    marginLeft: 'auto',
+                    transform: isExpanded ? 'rotate(0deg)' : 'rotate(-90deg)',
+                    transition: 'transform 0.2s ease'
+                  }}
+                >
+                  ▾
                 </span>
               </button>
               
+              {/* Section Items */}
               {isExpanded && (
-                <ul className="sidebar-menu">
+                <ul className="eth-sidebar__list">
                   {section.items.map((item) => (
-                    <li key={item.path} className="sidebar-menu-item">
+                    <li key={item.path}>
                       <Link 
                         href={item.path}
-                        className={`sidebar-link ${isActive(item.path) ? 'active' : ''}`}
+                        className={`eth-sidebar__item ${isActive(item.path) ? 'eth-sidebar__item--active' : ''}`}
+                        style={{ paddingLeft: '2.5rem' }}
                       >
-                        {item.name}
+                        <span className="eth-sidebar__item-icon" style={{ fontSize: '0.8rem' }}>
+                          {item.icon}
+                        </span>
+                        <span className="eth-sidebar__item-text">{item.name}</span>
                       </Link>
                     </li>
                   ))}
@@ -135,30 +168,41 @@ export default function DocsSidebar() {
           )
         })}
 
-        {/* Quick links to components */}
-        <div className="sidebar-section">
-          <div className="sidebar-section-title">
-            Resources
+        {/* Resources Section */}
+        <div className="eth-sidebar__section">
+          <div className="eth-sidebar__item" style={{ fontWeight: '600', background: 'var(--ethio-gray-50)' }}>
+            <span className="eth-sidebar__item-icon">🔗</span>
+            <span className="eth-sidebar__item-text">Resources</span>
           </div>
-          <ul className="sidebar-menu">
-            <li className="sidebar-menu-item">
-              <Link href="/components" className="sidebar-link">
-                All Components
+          <ul className="eth-sidebar__list">
+            <li>
+              <Link href="/components" className="eth-sidebar__item" style={{ paddingLeft: '2.5rem' }}>
+                <span className="eth-sidebar__item-icon" style={{ fontSize: '0.8rem' }}>📦</span>
+                <span className="eth-sidebar__item-text">All Components</span>
               </Link>
             </li>
-            <li className="sidebar-menu-item">
-              <Link href="/examples" className="sidebar-link">
-                Examples
+            <li>
+              <Link href="/examples" className="eth-sidebar__item" style={{ paddingLeft: '2.5rem' }}>
+                <span className="eth-sidebar__item-icon" style={{ fontSize: '0.8rem' }}>🎯</span>
+                <span className="eth-sidebar__item-text">Examples</span>
               </Link>
             </li>
-            <li className="sidebar-menu-item">
-              <a href="https://github.com/your-username/ethiowds" className="sidebar-link" target="_blank" rel="noopener noreferrer">
-                GitHub
+            <li>
+              <a 
+                href="https://github.com/chu01/ethioWDS" 
+                className="eth-sidebar__item" 
+                style={{ paddingLeft: '2.5rem' }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span className="eth-sidebar__item-icon" style={{ fontSize: '0.8rem' }}>🐙</span>
+                <span className="eth-sidebar__item-text">GitHub</span>
+                <span className="eth-sidebar__item-icon" style={{ fontSize: '0.7rem', marginLeft: 'auto' }}>↗</span>
               </a>
             </li>
           </ul>
         </div>
       </nav>
-    </div>
+    </aside>
   )
 }

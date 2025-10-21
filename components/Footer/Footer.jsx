@@ -1,9 +1,10 @@
+import PageContainer from '../PageContainer'
 import './Footer.scss'
 
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <div className="container">
+      <PageContainer>
         <div className="footer-content">
           <div className="footer-brand">
             <div className="logo">
@@ -21,25 +22,25 @@ export default function Footer() {
           <div className="footer-links">
             <div className="footer-section">
               <h4>Documentation</h4>
-              <a href="ethiowds-site/docs/getting-started">Getting started</a>
-              <a href="ethiowds-site/docs/components">Components</a>
-              <a href="ethiowds-site/docs/design-tokens">Design tokens</a>
-              <a href="ethiowds-site/docs/accessibility">Accessibility</a>
+              <a href="/docs">Getting started</a>
+              <a href="/components">Components</a>
+              <a href="/docs/design-tokens">Design tokens</a>
+              <a href="/docs/accessibility">Accessibility</a>
             </div>
             
             <div className="footer-section">
               <h4>Resources</h4>
-              <a href="https://github.com/chu01/ethiowds">GitHub</a>
-              <a href="https://npmjs.com/package/@abiyub/ethiowds">npm package</a>
-              <a href="ethiowds-site/docs/contributing">Contributing</a>
-              <a href="ethiowds-site/docs/changelog">Changelog</a>
+              <a href="https://github.com/chu01/ethiowds" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://npmjs.com/package/@abiyub/ethiowds" target="_blank" rel="noopener noreferrer">npm package</a>
+              <a href="/docs/contributing">Contributing</a>
+              <a href="/docs/changelog">Changelog</a>
             </div>
             
             <div className="footer-section">
               <h4>Community</h4>
-              <a href="https://github.com/chu01/ethiowds/issues">Report an issue</a>
-              <a href="https://github.com/chu01/ethiowds/discussions">Discussions</a>
-              <a href="https://github.com/chu01/ethiowds">Contribute</a>
+              <a href="https://github.com/chu01/ethiowds/issues" target="_blank" rel="noopener noreferrer">Report an issue</a>
+              <a href="https://github.com/chu01/ethiowds/discussions" target="_blank" rel="noopener noreferrer">Discussions</a>
+              <a href="https://github.com/chu01/ethiowds" target="_blank" rel="noopener noreferrer">Contribute</a>
             </div>
           </div>
         </div>
@@ -52,12 +53,12 @@ export default function Footer() {
             </p>
           </div>
           <div className="footer-meta">
-            <span>Version 1.1.1</span>
+            <span>Version 1.2.1</span>
             <span>·</span>
             <a href="/docs/license">MIT License</a>
           </div>
         </div>
-      </div>
+      </PageContainer>
     </footer>
   )
 }

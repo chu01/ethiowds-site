@@ -1,4 +1,6 @@
 import ComponentsSidebar from '../../components/ComponentsSidebar/ComponentsSidebar'
+import PageContainer from '../../components/PageContainer'
+import '@abiyub/ethiowds/dist/css/ethio-wds.css';
 import './components-layout.scss'
 
 export const metadata = {
@@ -8,13 +10,15 @@ export const metadata = {
 
 export default function ComponentsLayout({ children }) {
   return (
-    <div className="container">
-      <div className="components-layout">
+    <PageContainer className="components-page-container">
+      <div className="components-layout-inner">
         <ComponentsSidebar />
-        <div className="components-content">
-          {children}
-        </div>
+        <main className="components-main">
+          <div className="components-content">
+            {children}
+          </div>
+        </main>
       </div>
-    </div>
+    </PageContainer>
   )
 }

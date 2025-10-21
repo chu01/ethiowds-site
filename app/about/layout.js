@@ -1,4 +1,6 @@
 import AboutSidebar from '../../components/AboutSidebar/AboutSidebar'
+import PageContainer from '../../components/PageContainer'
+import '@abiyub/ethiowds/dist/css/ethio-wds.css'
 import './about-layout.scss'
 
 export const metadata = {
@@ -8,13 +10,13 @@ export const metadata = {
 
 export default function AboutLayout({ children }) {
   return (
-    <div className="container">
+    <PageContainer className="about-page-container">
       <div className="about-layout">
         <AboutSidebar />
         <div className="about-content">
           {children}
         </div>
       </div>
-    </div>
+    </PageContainer>
   )
 }

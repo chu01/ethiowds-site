@@ -15,59 +15,65 @@ export default function ComponentsSidebar() {
   const menuItems = [
     {
       title: 'Basic Components',
+      icon: '🛠️',
       items: [
-        { name: 'Button', path: '/components/button' },
-        { name: 'Input', path: '/components/input' },
-        { name: 'Select', path: '/components/select' },
-        { name: 'Checkbox', path: '/components/checkbox' },
-        { name: 'Radio', path: '/components/radio' },
-        { name: 'Textarea', path: '/components/textarea' },
-        { name: 'Forms', path: '/components/forms' },
+        { name: 'Button', path: '/components/button', icon: '🔘' },
+        { name: 'Input', path: '/components/input', icon: '📝' },
+        { name: 'Select', path: '/components/select', icon: '📋' },
+        { name: 'Checkbox', path: '/components/checkbox', icon: '☑️' },
+        { name: 'Radio', path: '/components/radio', icon: '🔘' },
+        { name: 'Textarea', path: '/components/textarea', icon: '📄' },
+        { name: 'Forms', path: '/components/forms', icon: '📊' },
       ]
     },
     {
       title: 'Layout Components',
+      icon: '📐',
       items: [
-        { name: 'Container', path: '/components/container' },
-        { name: 'Grid', path: '/components/grid' },
-        { name: 'Layout', path: '/components/layout' },
-        { name: 'Cards', path: '/components/cards' },
+        { name: 'Container', path: '/components/container', icon: '📦' },
+        { name: 'Grid', path: '/components/grid', icon: '🔳' },
+        { name: 'Layout', path: '/components/layout', icon: '🏗️' },
+        { name: 'Cards', path: '/components/cards', icon: '🎴' },
       ]
     },
     {
       title: 'Navigation Components',
+      icon: '🧭',
       items: [
-        { name: 'Navigation', path: '/components/navigation' },
-        { name: 'Pagination', path: '/components/pagination' },
-        { name: 'Breadcrumb', path: '/components/breadcrumb' },
-        { name: 'Tabs', path: '/components/tabs' },
+        { name: 'Navigation', path: '/components/navigation', icon: '🍔' },
+        { name: 'Pagination', path: '/components/pagination', icon: '🔢' },
+        { name: 'Breadcrumb', path: '/components/breadcrumb', icon: '🍞' },
+        { name: 'Tabs', path: '/components/tabs', icon: '📑' },
       ]
     },
     {
       title: 'Overlay Components',
+      icon: '💬',
       items: [
-        { name: 'Modal', path: '/components/modal' },
-        { name: 'Tooltip', path: '/components/tooltip' },
-        { name: 'Alerts', path: '/components/alerts' },
+        { name: 'Modal', path: '/components/modal', icon: '💬' },
+        { name: 'Tooltip', path: '/components/tooltip', icon: '💡' },
+        { name: 'Alerts', path: '/components/alerts', icon: '⚠️' },
       ]
     },
     {
       title: 'Data Display',
+      icon: '📊',
       items: [
-        { name: 'Table', path: '/components/table' },
-        { name: 'List', path: '/components/list' },
-        { name: 'Badges', path: '/components/badges' },
-        { name: 'Avatar', path: '/components/avatar' },
-        { name: 'Summary', path: '/components/summary' },
+        { name: 'Table', path: '/components/table', icon: '📋' },
+        { name: 'List', path: '/components/list', icon: '📜' },
+        { name: 'Badges', path: '/components/badges', icon: '🎯' },
+        { name: 'Avatar', path: '/components/avatar', icon: '👤' },
+        { name: 'Summary', path: '/components/summary', icon: '📈' },
       ]
     },
     {
       title: 'Feedback & Progress',
+      icon: '⚡',
       items: [
-        { name: 'Spinner', path: '/components/spinner' },
-        { name: 'Progress', path: '/components/progress' },
-        { name: 'Accordion', path: '/components/accordion' },
-        { name: 'Search', path: '/components/search' },
+        { name: 'Spinner', path: '/components/spinner', icon: '⏳' },
+        { name: 'Progress', path: '/components/progress', icon: '📊' },
+        { name: 'Accordion', path: '/components/accordion', icon: '📖' },
+        { name: 'Search', path: '/components/search', icon: '🔍' },
       ]
     }
   ]
@@ -76,7 +82,6 @@ export default function ComponentsSidebar() {
   useEffect(() => {
     const initialExpandedState = {}
     menuItems.forEach((section, index) => {
-      // Check if any item in this section is active
       const hasActiveItem = section.items.some(item => isActive(item.path))
       initialExpandedState[index] = hasActiveItem
     })
@@ -91,54 +96,82 @@ export default function ComponentsSidebar() {
   }
 
   const isSectionExpanded = (index) => {
-    return expandedSections[index] !== false // Default to true if not set
+    return expandedSections[index] !== false
   }
 
   return (
-    <aside className="components-sidebar">
-      <div className="sidebar-header">
-        <h3>Components</h3>
+    <aside className="eth-sidebar" style={{ width: '280px', flexShrink: 0 }}>
+      {/* Sidebar Header */}
+      <div className="eth-sidebar__header">
+        <div className="eth-sidebar__brand">
+          <span className="eth-sidebar__brand-text">Components</span>
+        </div>
       </div>
       
-      <nav className="sidebar-nav">
-        <div className="sidebar-section">
-          <ul className="sidebar-menu">
-            <li className="sidebar-menu-item">
+      {/* Sidebar Navigation */}
+      <nav className="eth-sidebar__nav">
+        {/* All Components Link */}
+        <div className="eth-sidebar__section">
+          <ul className="eth-sidebar__list">
+            <li>
               <Link 
                 href="/components"
-                className={`sidebar-link ${isActive('/components') && !pathname.includes('/components/') ? 'active' : ''}`}
+                className={`eth-sidebar__item ${isActive('/components') && !pathname.includes('/components/') ? 'eth-sidebar__item--active' : ''}`}
               >
-                All Components
+                <span className="eth-sidebar__item-icon">📦</span>
+                <span className="eth-sidebar__item-text">All Components</span>
               </Link>
             </li>
           </ul>
         </div>
 
+        {/* Component Sections */}
         {menuItems.map((section, index) => {
           const isExpanded = isSectionExpanded(index)
           
           return (
-            <div key={index} className="sidebar-section">
+            <div key={index} className="eth-sidebar__section">
+              {/* Section Header */}
               <button 
-                className="sidebar-section-title"
+                className={`eth-sidebar__item ${isExpanded ? 'eth-sidebar__item--active' : ''}`}
                 onClick={() => toggleSection(index)}
                 aria-expanded={isExpanded}
+                style={{ 
+                  width: '100%', 
+                  textAlign: 'left',
+                  border: 'none',
+                  background: 'none',
+                  cursor: 'pointer'
+                }}
               >
-                {section.title}
-                <span className="section-toggle">
-                  {isExpanded ? '−' : '+'}
+                <span className="eth-sidebar__item-icon">{section.icon}</span>
+                <span className="eth-sidebar__item-text">{section.title}</span>
+                <span 
+                  className="eth-sidebar__item-chevron"
+                  style={{ 
+                    marginLeft: 'auto',
+                    transform: isExpanded ? 'rotate(0deg)' : 'rotate(-90deg)',
+                    transition: 'transform 0.2s ease'
+                  }}
+                >
+                  ▾
                 </span>
               </button>
               
+              {/* Section Items */}
               {isExpanded && (
-                <ul className="sidebar-menu">
+                <ul className="eth-sidebar__list">
                   {section.items.map((item) => (
-                    <li key={item.path} className="sidebar-menu-item">
+                    <li key={item.path}>
                       <Link 
                         href={item.path}
-                        className={`sidebar-link ${isActive(item.path) ? 'active' : ''}`}
+                        className={`eth-sidebar__item ${isActive(item.path) ? 'eth-sidebar__item--active' : ''}`}
+                        style={{ paddingLeft: '2.5rem' }}
                       >
-                        {item.name}
+                        <span className="eth-sidebar__item-icon" style={{ fontSize: '0.8rem' }}>
+                          {item.icon}
+                        </span>
+                        <span className="eth-sidebar__item-text">{item.name}</span>
                       </Link>
                     </li>
                   ))}

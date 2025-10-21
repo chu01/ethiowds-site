@@ -1,25 +1,26 @@
 @use '../../app/globals.scss' as *;
-
-.features {
-  padding: 4rem 0;
+.features-section {
+  width: 100%;
   background: white;
+  padding: 5rem 0;
 }
 
 .features-header {
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto 4rem;
-
-  h2 {
-    font-size: 2.25rem;
+  margin-bottom: 4rem;
+  
+  .features-title {
+    font-size: 2.5rem;
     font-weight: 700;
-    color: #1b1b1b;
+    color: var(--ethio-gray-900);
     margin-bottom: 1rem;
   }
-
-  p {
-    font-size: 1.125rem;
-    color: #5c5c5c;
+  
+  .features-subtitle {
+    font-size: 1.25rem;
+    color: var(--ethio-gray-600);
+    max-width: 600px;
+    margin: 0 auto;
     line-height: 1.6;
   }
 }
@@ -31,54 +32,62 @@
 }
 
 .feature-card {
-  background: #f8f9fa;
-  border-radius: 0.75rem;
+  background: white;
   padding: 2rem;
-  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  border: 1px solid var(--ethio-gray-200);
+  text-align: center;
   transition: all 0.3s ease;
-
+  
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    border-color: $primary;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
   }
-
+  
   .feature-icon {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
   }
-
+  
   .feature-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: #1b1b1b;
+    color: var(--ethio-gray-900);
     margin-bottom: 1rem;
   }
-
+  
   .feature-description {
-    color: #5c5c5c;
+    color: var(--ethio-gray-600);
     line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-
-  .feature-link {
-    color: $primary;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.875rem;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    margin: 0;
   }
 }
 
+// Responsive Design
 @media (max-width: 768px) {
-  .features-grid {
-    grid-template-columns: 1fr;
+  .features-section {
+    padding: 3rem 0;
   }
   
-  .features-header h2 {
-    font-size: 1.75rem;
+  .features-header {
+    margin-bottom: 3rem;
+    
+    .features-title {
+      font-size: 2rem;
+    }
+    
+    .features-subtitle {
+      font-size: 1.125rem;
+    }
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
   }
 }

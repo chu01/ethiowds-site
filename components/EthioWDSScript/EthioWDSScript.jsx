@@ -1,43 +1,65 @@
 'use client'
-
 import { useEffect } from 'react'
 
 export default function EthioWDSScript() {
   useEffect(() => {
-    // Load and initialize EthioWDS
     const loadEthioWDS = async () => {
       try {
-        // Check if already loaded
+        // Check if EthioWDS is already loaded and initialized
         if (window.ethioWDS && window.ethioInitialized) {
+          console.log('✅ EthioWDS already initialized');
           return;
         }
 
-        // Load the script
-        const script = document.createElement('script');
-        script.src = 'https://unpkg.com/@abiyub/ethiowds/dist/js/ethio-wds.js';
-        script.async = true;
+        // Check if EthioWDS is available but not initialized
+        if (window.ethioWDS && !window.ethioInitialized) {
+          console.log('🔄 EthioWDS available, marking as initialized');
+          window.ethioInitialized = true;
+          return;
+        }
+
+        // Check if EthioWDS constructor is available
+        if (window.EthioWDS && typeof window.EthioWDS === 'function') {
+          console.log('🚀 Initializing EthioWDS with constructor');
+          window.ethioWDS = new window.EthioWDS();
+          window.ethioInitialized = true;
+          console.log('✅ EthioWDS initialized successfully');
+          return;
+        }
+
+        // If EthioWDS isn't available yet, wait for it
+        console.log('⏳ Waiting for EthioWDS to load...');
         
-        script.onload = () => {
-          if (window.ethioWDS) {
-            // Initialize EthioWDS
-            new window.ethioWDS();
+        const checkInterval = setInterval(() => {
+          if (window.EthioWDS && typeof window.EthioWDS === 'function') {
+            clearInterval(checkInterval);
+            console.log('🚀 Initializing EthioWDS after wait');
+            window.ethioWDS = new window.EthioWDS();
             window.ethioInitialized = true;
-            console.log('✅ EthioWDS initialized successfully');
+            console.log('✅ EthioWDS initialized successfully after wait');
           }
-        };
+        }, 100);
 
-        script.onerror = () => {
-          console.error('❌ Failed to load EthioWDS script');
-        };
+        // Timeout after 5 seconds
+        setTimeout(() => {
+          clearInterval(checkInterval);
+          if (!window.ethioInitialized) {
+            console.warn('⚠️ EthioWDS initialization timeout');
+          }
+        }, 5000);
 
-        document.head.appendChild(script);
       } catch (error) {
-        console.error('Error loading EthioWDS:', error);
+        console.error('❌ Error initializing EthioWDS:', error);
       }
-    };
+    }
 
     loadEthioWDS();
-  }, []);
 
-  return null; // This component doesn't render anything
+    // Cleanup function
+    return () => {
+      // Optional: Cleanup if needed
+    }
+  }, [])
+
+  return null
 }

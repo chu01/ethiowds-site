@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import PageContainer from '../PageContainer' // Adjust path as needed
 import './Header.scss'
 
 export default function Header() {
@@ -9,7 +10,7 @@ export default function Header() {
 
   return (
     <header className="site-header">
-      <div className="container">
+      <PageContainer>
         <div className="header-content">
           <div className="header-brand">
             <Link href="/" className="logo">
@@ -53,7 +54,7 @@ export default function Header() {
             <span></span>
           </button>
         </div>
-      </div>
+      </PageContainer>
     </header>
   )
 }

@@ -1,57 +1,37 @@
+import Link from 'next/link'
 import './Hero.scss'
 
 export default function Hero() {
   return (
-    <section className="hero">
-      <div className="container">
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1 className="hero-title">
-              Build better Ethiopian digital experiences
-            </h1>
-            <p className="hero-description">
-              EthioWDS is an open-source design system for the Ethiopian government. 
-              Create accessible, mobile-friendly, and consistent websites and applications 
-              with Ethiopian identity.
-            </p>
-            <div className="hero-actions">
-              <a href="/docs" className="button button-primary button-lg">
-                Get started
-              </a>
-              <a href="/docs/components/buttons" className="button button-outline button-lg">
-                View components
-              </a>
+    <section className="hero-section">
+      <div className="hero-background">
+        <div className="eth-container">
+          <div className="hero-content">
+            <div className="hero-text">
+              <h1 className="hero-title">
+                <span className="title-flag">🇪🇹</span>
+                EthioWDS
+              </h1>
+              <h2 className="hero-subtitle">
+                Ethiopian Web Design System
+              </h2>
+              <p className="hero-description">
+                A comprehensive design system for building accessible, 
+                consistent, and culturally relevant Ethiopian web experiences.
+              </p>
+              <div className="hero-actions">
+                <Link href="/docs/installation" className="eth-button eth-button--primary eth-button--large">
+                  Get Started
+                </Link>
+                <Link href="/components" className="eth-button eth-button--outline eth-button--large">
+                  View Components
+                </Link>
+              </div>
             </div>
-            <div className="hero-meta">
-              <span className="version">Latest version: 1.1.1</span>
-              <a href="https://github.com/chu01/ethiowds" className="github-link">
-                View on GitHub
-              </a>
-            </div>
-          </div>
-          <div className="hero-visual">
-            <div className="component-showcase">
-              <div className="component-grid">
-                <div className="component-card">
-                  <div className="component-icon">🎨</div>
-                  <h4>Design tokens</h4>
-                  <p>Colors, typography, spacing</p>
-                </div>
-                <div className="component-card">
-                  <div className="component-icon">🧩</div>
-                  <h4>Components</h4>
-                  <p>15+ reusable components</p>
-                </div>
-                <div className="component-card">
-                  <div className="component-icon">♿</div>
-                  <h4>Accessible</h4>
-                  <p>WCAG 2.1 compliant</p>
-                </div>
-                <div className="component-card">
-                  <div className="component-icon">🇪🇹</div>
-                  <h4>Ethiopian</h4>
-                  <p>Built for Ethiopian needs</p>
-                </div>
+            <div className="hero-visual">
+              {/* Add hero image or illustration */}
+              <div className="hero-placeholder">
+                🎨 EthioWDS Visual
               </div>
             </div>
           </div>
