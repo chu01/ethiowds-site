@@ -39,7 +39,7 @@ export default function Header() {
               >
                 GitHub
               </Link>
-              <Link href="/docs" className="button button-primary" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/docs" className="eth-button eth-button--primary" onClick={() => setIsMobileMenuOpen(false)}>
                 Get Started
               </Link>
             </div>

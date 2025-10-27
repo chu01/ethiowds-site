@@ -26,11 +26,18 @@
     color: white;
     padding: 3rem 0;
     margin: -2rem -2rem 3rem -2rem;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     
     .header-content {
       max-width: 800px;
       margin: 0 auto;
       text-align: center;
+      padding: 0 2rem;
     }
     
     .page-title {
@@ -48,13 +55,15 @@
     }
     
     .component-stats {
-      display: block;
-      // justify-content: center;
+      display: flex;
+      justify-content: center;
       gap: 3rem;
       margin-top: 2rem;
+      flex-wrap: wrap;
       
       .stat {
         text-align: center;
+        flex: 0 1 auto;
         
         .stat-number {
           display: block;
@@ -257,12 +266,23 @@
   }
   
   .components-content {
-    padding: 1rem;
+    padding: 0;
+    overflow-x: hidden;
   }
   
   .components-page .page-header {
-    margin: -1rem -1rem 2rem -1rem;
+    margin: 0 0 2rem 0;
     padding: 2rem 1rem;
+    width: 100%;
+    position: static;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+    
+    .header-content {
+      padding: 0 1rem;
+    }
     
     .page-title {
       font-size: 2rem;
@@ -270,16 +290,38 @@
     
     .component-stats {
       gap: 1.5rem;
+      justify-content: space-around;
       
-      .stat .stat-number {
-        font-size: 1.5rem;
+      .stat {
+        flex: 1 1 auto;
+        min-width: 100px;
+        
+        .stat-number {
+          font-size: 1.5rem;
+        }
+        
+        .stat-label {
+          font-size: 0.75rem;
+        }
       }
     }
+    
+    .page-subtitle {
+      font-size: 1rem;
+    }
+  }
+  
+  .components-page > .components-grid {
+    padding: 0 1rem;
   }
   
   .components-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  
+  .components-page > .components-cta {
+    padding: 0 1rem;
   }
   
   .cta-buttons {

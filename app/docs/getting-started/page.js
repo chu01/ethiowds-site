@@ -113,17 +113,17 @@ export default function GettingStartedPage() {
             <div className="step-card">
               <h4>🎨 Explore Components</h4>
               <p>Browse all available components with examples and usage guidelines.</p>
-              <a href="/docs/components/buttons" className="button button-outline">View Components</a>
+              <a href="/components" className="eth-button eth-button--outline">View Components</a>
             </div>
             <div className="step-card">
               <h4>🎯 Learn Guidelines</h4>
               <p>Understand design principles and best practices for using EthioWDS.</p>
-              <a href="/docs/guidance" className="button button-outline">Read Guidelines</a>
+              <a href="/docs/guidance" className="eth-button eth-button--outline">Read Guidelines</a>
             </div>
             <div className="step-card">
               <h4>⚙️ Customize Theme</h4>
               <p>Learn how to customize colors, typography, and other design tokens.</p>
-              <a href="/docs/design-tokens" className="button button-outline">Customize</a>
+              <a href="/docs/theming" className="eth-button eth-button--outline">Customize</a>
             </div>
           </div>
         </section>
