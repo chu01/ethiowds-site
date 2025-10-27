@@ -201,6 +201,11 @@
 }
 
 @media (max-width: 768px) {
+  .docs-page-container {
+    margin: 0;
+    padding: 0;
+  }
+  
   .docs-layout {
     flex-direction: column;
   }

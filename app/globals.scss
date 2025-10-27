@@ -167,6 +167,14 @@ body {
   min-height: calc(100vh - 200px); // Adjust based on header/footer height
 }
 
+// Remove top margin/padding on mobile
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
 // Home page styles
 .home-page {
   width: 100%;

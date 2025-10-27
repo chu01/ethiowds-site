@@ -1,12 +1,27 @@
-// PageContainer.scss or globals.scss
+// PageContainer.scss
+.page-container {
+  width: 100%;
+}
+
 .eth-container {
     width: 100%;
-    max-width: 1200px; // This constrains the width
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
   
     &--full {
-      max-width: none; // This removes the constraint
+      max-width: none;
       padding: 0;
     }
+}
+
+// Remove extra padding on mobile to eliminate whitespace
+@media (max-width: 768px) {
+  .eth-container {
+    padding: 0;
   }
+  
+  .page-container .eth-container {
+    padding: 0 1rem;
+  }
+}

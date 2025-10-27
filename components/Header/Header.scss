@@ -135,6 +135,18 @@
   .site-header {
     position: sticky; // Stick header to top
     top: 0;
+    background: white; // Ensure background
+  }
+  
+  .header-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  // Fix header padding on docs pages (which have nested PageContainer)
+  .site-header .eth-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   
   .header-nav {
