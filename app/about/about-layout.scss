@@ -135,10 +135,25 @@
 @media (max-width: 768px) {
   .about-layout {
     flex-direction: column;
+    position: relative;
+  }
+  
+  .eth-sidebar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    z-index: 50;
+    width: 280px;
+    transition: left 0.3s ease;
+  }
+  
+  .eth-sidebar.mobile-open {
+    left: 0;
   }
   
   .about-content {
     padding: 1rem;
+    width: 100%;
   }
   
   .about-page {
