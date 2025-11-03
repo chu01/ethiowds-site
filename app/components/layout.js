@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function ComponentsLayout({ children }) {
   return (
-    <PageContainer className="components-page-container">
+    <PageContainer className="components-page-container" >
       <div className="components-layout-inner">
         <ComponentsSidebar />
         <main className="components-main">

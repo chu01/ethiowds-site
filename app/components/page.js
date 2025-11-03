@@ -104,8 +104,8 @@ export default function ComponentsPage() {
 
   return (
     <div className="components-page">
-      <div className="page-header">
-        <div className="header-content">
+      <div className="components-page-header">
+        <div className="components-header-content">
           <h1 className="page-title">EthioWDS Components</h1>
           <p className="page-subtitle">
             A comprehensive collection of {totalComponents}+ components designed for modern Ethiopian web applications. 
@@ -125,7 +125,7 @@ export default function ComponentsPage() {
               <span className="stat-label">Accessible</span>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
 
       <div className="components-grid">
