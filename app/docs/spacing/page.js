@@ -32,40 +32,12 @@ export default function SpacingPage() {
             </div>
           </div>
   
-          <pre className="code-block">
-  {`/* Spacing scale in CSS */
-  :root {
-    --spacing-1: 0.25rem;  /* 4px */
-    --spacing-2: 0.5rem;   /* 8px */
-    --spacing-3: 0.75rem;  /* 12px */
-    --spacing-4: 1rem;     /* 16px */
-    --spacing-5: 1.5rem;   /* 24px */
-    --spacing-6: 2rem;     /* 32px */
-    --spacing-8: 3rem;     /* 48px */
-  }`}
-          </pre>
+          <p>The design system exposes spacing as variables (for example, 1 unit = 0.25rem, 4 units = 1rem). Use these in your project for padding, margins, and gaps so layouts stay consistent.</p>
         </section>
   
         <section className="docs-section">
-          <h2>Usage in SCSS</h2>
-          <p>Use the spacing variables in your SCSS files:</p>
-          
-          <pre className="code-block">
-  {`// Import EthioWDS
-  @use '@abiyub/ethiowds' as *;
-  
-  .component {
-    padding: $spacing-unit; // 1rem
-    
-    &-compact {
-      padding: $spacing-unit * 0.5; // 0.5rem
-    }
-    
-    &-spacious {
-      padding: $spacing-unit * 2; // 2rem
-    }
-  }`}
-          </pre>
+          <h2>Usage</h2>
+          <p>Use the spacing variables in your project for padding, margins, and gaps. Compact layouts can use smaller units; spacious layouts can use larger ones. Keeping to the scale improves consistency across the site.</p>
         </section>
   
         <section className="docs-section">
@@ -100,23 +72,8 @@ export default function SpacingPage() {
         </section>
   
         <section className="docs-section">
-          <h2>Responsive Spacing</h2>
-          <p>EthioWDS supports responsive spacing for different screen sizes:</p>
-          
-          <pre className="code-block">
-  {`// Mobile first approach
-  .container {
-    padding: 1rem; // Mobile
-    
-    @media (min-width: 768px) {
-      padding: 2rem; // Tablet and desktop
-    }
-    
-    @media (min-width: 1024px) {
-      padding: 3rem; // Large desktop
-    }
-  }`}
-          </pre>
+          <h2>Responsive spacing</h2>
+          <p>EthioWDS supports responsive spacing for different screen sizes. Use smaller spacing on mobile and increase spacing on tablet and desktop for a comfortable reading and layout experience.</p>
         </section>
       </div>
     )

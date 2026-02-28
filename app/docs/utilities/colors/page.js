@@ -3,7 +3,7 @@ export default function ColorsUtilityPage() {
       <div className="docs-page">
         <h1>Color Utilities</h1>
         <p className="lead">
-          Use color utility classes for quick styling without custom CSS.
+          Use color utility classes for quick styling.
         </p>
   
         <section className="docs-section">

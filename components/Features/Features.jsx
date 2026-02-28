@@ -20,12 +20,12 @@ export default function Features() {
     {
       icon: '⚡',
       title: 'Fast & Lightweight',
-      description: 'Optimized for performance with minimal bundle size'
+      description: 'Optimized for performance with minimal asset size'
     },
     {
       icon: '🔧',
       title: 'Easy to Use',
-      description: 'Simple integration with React, Vue, and plain HTML/CSS'
+      description: 'Simple integration with your project and existing workflow'
     },
     {
       icon: '🌍',

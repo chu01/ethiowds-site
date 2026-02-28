@@ -81,7 +81,7 @@ export default function BreadcrumbPage() {
           <h3>Performance</h3>
           <ul>
             <li>Optimize images and assets for faster loading</li>
-            <li>Minimize JavaScript bundle size</li>
+            <li>Keep asset sizes small and efficient</li>
             <li>Use lazy loading for below-the-fold content</li>
             <li>Implement proper caching strategies</li>
           </ul>
@@ -96,8 +96,8 @@ export default function BreadcrumbPage() {
   
           <h3>Progressive Enhancement</h3>
           <ul>
-            <li>Build core functionality that works without JavaScript</li>
-            <li>Enhance experience with JavaScript where available</li>
+            <li>Build core functionality that works without advanced scripting</li>
+            <li>Enhance the experience where additional behavior is available</li>
             <li>Provide accessible fallbacks for advanced features</li>
             <li>Test with different technology constraints</li>
           </ul>

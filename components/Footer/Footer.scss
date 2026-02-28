@@ -29,16 +29,17 @@
     .logo-text {
       display: flex;
       flex-direction: column;
-      line-height: 1;
+      line-height: 1.2;
+      gap: 0.125rem;
       
       .logo-primary {
         color: white;
       }
       
       .logo-secondary {
-        color: var(--primary);
-        font-size: 0.875rem;
-        font-weight: 600;
+        color: var(--ethio-gray-400, rgba(255, 255, 255, 0.8));
+        font-size: 0.75rem;
+        font-weight: 500;
       }
     }
   }

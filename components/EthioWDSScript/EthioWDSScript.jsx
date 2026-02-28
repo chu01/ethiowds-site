@@ -1,65 +1,43 @@
 'use client'
 import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function EthioWDSScript() {
+  const pathname = usePathname()
+
   useEffect(() => {
-    const loadEthioWDS = async () => {
+    let cancelled = false
+    const loadAndInit = async () => {
       try {
-        // Check if EthioWDS is already loaded and initialized
-        if (window.ethioWDS && window.ethioInitialized) {
-          console.log('✅ EthioWDS already initialized');
-          return;
+        const mod = await import('@abiyub/ethiowds')
+        if (cancelled) return
+        const EthioWDS = mod?.default ?? (typeof window !== 'undefined' && window.EthioWDS)
+        if (!EthioWDS) return
+        if (typeof window !== 'undefined' && !window.ethioWDS) {
+          window.ethioWDS = new EthioWDS({
+            loadCSS: false,
+            loadFonts: false,
+            autoInit: false
+          })
         }
-
-        // Check if EthioWDS is available but not initialized
-        if (window.ethioWDS && !window.ethioInitialized) {
-          console.log('🔄 EthioWDS available, marking as initialized');
-          window.ethioInitialized = true;
-          return;
+        if (typeof window !== 'undefined' && window.ethioWDS?.autoInitializeComponents) {
+          window.ethioWDS.autoInitializeComponents()
         }
-
-        // Check if EthioWDS constructor is available
-        if (window.EthioWDS && typeof window.EthioWDS === 'function') {
-          console.log('🚀 Initializing EthioWDS with constructor');
-          window.ethioWDS = new window.EthioWDS();
-          window.ethioInitialized = true;
-          console.log('✅ EthioWDS initialized successfully');
-          return;
-        }
-
-        // If EthioWDS isn't available yet, wait for it
-        console.log('⏳ Waiting for EthioWDS to load...');
-        
-        const checkInterval = setInterval(() => {
-          if (window.EthioWDS && typeof window.EthioWDS === 'function') {
-            clearInterval(checkInterval);
-            console.log('🚀 Initializing EthioWDS after wait');
-            window.ethioWDS = new window.EthioWDS();
-            window.ethioInitialized = true;
-            console.log('✅ EthioWDS initialized successfully after wait');
-          }
-        }, 100);
-
-        // Timeout after 5 seconds
-        setTimeout(() => {
-          clearInterval(checkInterval);
-          if (!window.ethioInitialized) {
-            console.warn('⚠️ EthioWDS initialization timeout');
-          }
-        }, 5000);
-
-      } catch (error) {
-        console.error('❌ Error initializing EthioWDS:', error);
+      } catch (err) {
+        console.error('Error loading EthioWDS:', err)
       }
     }
-
-    loadEthioWDS();
-
-    // Cleanup function
-    return () => {
-      // Optional: Cleanup if needed
-    }
+    loadAndInit()
+    return () => { cancelled = true }
   }, [])
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.ethioWDS?.autoInitializeComponents) return
+    const t = requestAnimationFrame(() => {
+      window.ethioWDS.autoInitializeComponents()
+    })
+    return () => cancelAnimationFrame(t)
+  }, [pathname])
 
   return null
 }

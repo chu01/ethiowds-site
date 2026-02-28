@@ -1,132 +1,53 @@
+import Link from 'next/link'
+
 export default function GettingStartedPage() {
-    return (
-      <div className="docs-page">
-        <h1>Getting Started</h1>
-        <p className="lead">
-          Learn how to install and set up EthioWDS in your project in just a few minutes.
-        </p>
-  
-        <section className="docs-section">
-          <h2>Quick Installation</h2>
-          
-          <div className="installation-method">
-            <h3>npm</h3>
-            <pre className="code-block">npm install @abiyub/ethiowds</pre>
+  return (
+    <div className="docs-page">
+      <h1>Getting started</h1>
+      <p className="lead">
+        Get started using the Design System by installing, compiling, and customizing our code.
+      </p>
+
+      <section className="docs-section">
+        <h2>Install the design system</h2>
+        <p>Obtain the EthioWDS code and add it to your project using your preferred method. The design system can be installed via a package manager, downloaded as a release, or included from a CDN for quick prototyping.</p>
+      </section>
+
+      <section className="docs-section">
+        <h2>Add styles and assets</h2>
+        <p>Include the design system styles in your project so that components and design tokens are available. You can use the compiled styles as-is or customize variables and themes to match your brand.</p>
+      </section>
+
+      <section className="docs-section">
+        <h2>Use components</h2>
+        <p>Use the design system components and patterns in your pages. All components follow consistent naming and structure. Many support variants for different visual styles and contexts.</p>
+      </section>
+
+      <section className="docs-section">
+        <h2>Customize as needed</h2>
+        <p>Override design tokens—colors, typography, spacing—to align with your product. The design system is built to be customized while keeping accessibility and consistency.</p>
+      </section>
+
+      <section className="docs-section">
+        <h2>Next steps</h2>
+        <div className="next-steps-grid">
+          <div className="step-card">
+            <h4>Explore components</h4>
+            <p>Browse all available components with examples and usage guidelines.</p>
+            <a href="/components" className="eth-button eth-button--outline">View components</a>
           </div>
-  
-          <div className="installation-method">
-            <h3>yarn</h3>
-            <pre className="code-block">yarn add @abiyub/ethiowds</pre>
+          <div className="step-card">
+            <h4>Learn guidelines</h4>
+            <p>Understand design principles and best practices for using EthioWDS.</p>
+            <a href="/docs/guidance" className="eth-button eth-button--outline">Read guidelines</a>
           </div>
-  
-          <div className="installation-method">
-            <h3>CDN (Quick Start)</h3>
-            <pre className="code-block">
-  {`<!-- CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/@abiyub/ethiowds/dist/css/ethio-wds.css">
-  
-  <!-- JavaScript -->
-  <script src="https://unpkg.com/@abiyub/ethiowds/dist/js/ethio-wds.js"></script>`}
-            </pre>
+          <div className="step-card">
+            <h4>Customize theme</h4>
+            <p>Learn how to customize colors, typography, and other design tokens.</p>
+            <a href="/docs/theming" className="eth-button eth-button--outline">Customize</a>
           </div>
-        </section>
-  
-        <section className="docs-section">
-          <h2>Basic Usage</h2>
-          
-          <h3>CSS Only</h3>
-          <p>Include the CSS and start using components with class names:</p>
-          <pre className="code-block">
-  {`<button class="ethio-btn ethio-btn-primary">Click me</button>
-  <div class="ethio-card">
-    <div class="ethio-card-body">
-      <p>This is a card</p>
+        </div>
+      </section>
     </div>
-  </div>`}
-          </pre>
-  
-          <h3>With JavaScript</h3>
-          <p>For interactive components, include the JavaScript:</p>
-          <pre className="code-block">
-  {`<script>
-  // Initialize EthioWDS
-  const ethio = new ethioWDS({
-    theme: 'default',
-    language: 'am'
-  });
-  </script>`}
-          </pre>
-  
-          <h3>SCSS Customization</h3>
-          <p>For full customization, import the SCSS source:</p>
-          <pre className="code-block">
-  {`// Your SCSS file
-  @use '@abiyub/ethiowds' as *;
-  
-  // Customize variables
-  $primary: #2E86AB;
-  $ethio-green: #1B5E20;
-  
-  // Your custom styles
-  .my-component {
-    background: $primary;
-    color: white;
-  }`}
-          </pre>
-        </section>
-  
-        <section className="docs-section">
-          <h2>Framework Integration</h2>
-          
-          <h3>React/Next.js</h3>
-          <pre className="code-block">
-  {`// Import CSS in your layout
-  import '@abiyub/ethiowds/dist/css/ethio-wds.css';
-  
-  // Use in your components
-  export default function MyComponent() {
-    return (
-      <button className="ethio-btn ethio-btn-primary">
-        EthioWDS Button
-      </button>
-    );
-  }`}
-          </pre>
-  
-          <h3>Vue.js</h3>
-          <pre className="code-block">
-  {`<template>
-    <button class="ethio-btn ethio-btn-primary">
-      EthioWDS Button
-    </button>
-  </template>
-  
-  <style>
-  @import '@abiyub/ethiowds/dist/css/ethio-wds.css';
-  </style>`}
-          </pre>
-        </section>
-  
-        <section className="docs-section">
-          <h2>Next Steps</h2>
-          <div className="next-steps-grid">
-            <div className="step-card">
-              <h4>🎨 Explore Components</h4>
-              <p>Browse all available components with examples and usage guidelines.</p>
-              <a href="/components" className="eth-button eth-button--outline">View Components</a>
-            </div>
-            <div className="step-card">
-              <h4>🎯 Learn Guidelines</h4>
-              <p>Understand design principles and best practices for using EthioWDS.</p>
-              <a href="/docs/guidance" className="eth-button eth-button--outline">Read Guidelines</a>
-            </div>
-            <div className="step-card">
-              <h4>⚙️ Customize Theme</h4>
-              <p>Learn how to customize colors, typography, and other design tokens.</p>
-              <a href="/docs/theming" className="eth-button eth-button--outline">Customize</a>
-            </div>
-          </div>
-        </section>
-      </div>
-    )
-  }
+  )
+}

@@ -21,7 +21,7 @@ export default function AccessibilityPage() {
       <section className="docs-section">
         <h2>Using Components Accessibly</h2>
         <p>
-          Use semantic HTML and the recommended props (e.g. <code>aria-label</code>, <code>id</code> for associations). Avoid removing focus outlines unless you replace them with a visible focus style.
+          Use semantic structure and the recommended attributes for labels and associations. Avoid removing focus outlines unless you replace them with a visible focus style.
         </p>
       </section>
 

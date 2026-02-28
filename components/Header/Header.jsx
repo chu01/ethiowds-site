@@ -16,8 +16,8 @@ export default function Header() {
             <Link href="/" className="logo">
               <span className="logo-flag">🇪🇹</span>
               <span className="logo-text">
-                <span className="logo-primary">Ethio</span>
-                <span className="logo-secondary">WDS</span>
+                <span className="logo-primary">EthioWDS</span>
+                <span className="logo-secondary">Ethio Web Design System</span>
               </span>
             </Link>
           </div>

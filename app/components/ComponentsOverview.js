@@ -53,7 +53,7 @@ export default function ComponentsOverview({ componentCategories }) {
           <strong>{filtered.length}</strong> component{filtered.length !== 1 ? 's' : ''} found
         </p>
         <p className="components-overview__packages-note">
-          See the <Link href="/docs/installation">installation guide</Link> to add EthioWDS to your project.
+          See the <Link href="/docs/installation">installation guide</Link> to get started using the Design System.
         </p>
       </section>
 

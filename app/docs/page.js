@@ -15,13 +15,13 @@ export default function DocsLandingPage() {
           <h2 id="get-started-heading" className="docs-landing__section-title">Get started with EthioWDS</h2>
           <div className="docs-landing__get-started">
             <Link href="/docs/installation" className="docs-landing__card">
-              <h3 className="docs-landing__card-title">Developers</h3>
+              <h3 className="docs-landing__card-title">Getting started</h3>
               <p className="docs-landing__card-desc">
-                Get started with our code base by installing the package with npm and following the installation guide.
+                Get started using the Design System by installing, compiling, and customizing our code.
               </p>
             </Link>
             <Link href="/docs/guidance" className="docs-landing__card">
-              <h3 className="docs-landing__card-title">Designers</h3>
+              <h3 className="docs-landing__card-title">Design guidance</h3>
               <p className="docs-landing__card-desc">
                 Use our design principles, colors, typography, and spacing tokens for wireframes and prototypes.
               </p>
@@ -55,11 +55,11 @@ export default function DocsLandingPage() {
           <ul className="docs-landing__concepts">
             <li><strong>Design tokens:</strong> Design tokens are predefined units of color, spacing, typography, and more that form the building blocks of the design system. See <Link href="/docs/design-tokens">Design tokens</Link> and <Link href="/docs/colors">Colors</Link>, <Link href="/docs/typography">Typography</Link>, <Link href="/docs/spacing">Spacing</Link>.</li>
             <li><strong>Components:</strong> Components are simple, consistent solutions to common user interface needs, like buttons, forms, and navigation. If tokens are the building blocks of the design system, components are the building blocks of a site or service. Browse <Link href="/components">Components</Link>.</li>
-            <li><strong>Utilities:</strong> Utilities are single-purpose classes mapped to EthioWDS tokens. They let you prototype and style layouts without writing custom CSS. See <Link href="/docs/utilities/display">Display</Link>, <Link href="/docs/utilities/colors">Colors</Link>, <Link href="/docs/utilities/spacing">Spacing</Link>.</li>
+            <li><strong>Utilities:</strong> Utilities are single-purpose classes mapped to EthioWDS tokens. They let you prototype and style layouts quickly. See <Link href="/docs/utilities/display">Display</Link>, <Link href="/docs/utilities/colors">Colors</Link>, <Link href="/docs/utilities/spacing">Spacing</Link>.</li>
             <li><strong>Guidance:</strong> Our guidance covers design principles, accessibility, and best practices so components behave the way users expect. See <Link href="/docs/guidance">Guidance</Link> and <Link href="/docs/accessibility">Accessibility</Link>.</li>
           </ul>
           <p className="docs-landing__body">
-            We&apos;ve created these resources to help designers and developers start quickly and use a shared language when customizing and updating content. The EthioWDS community is also a resource—reach out with questions or ideas before, during, or after getting started.
+            We&apos;ve created these resources to help teams start quickly and use a shared language when customizing and updating content. The EthioWDS community is also a resource—reach out with questions or ideas before, during, or after getting started.
           </p>
         </section>
 
@@ -91,7 +91,7 @@ export default function DocsLandingPage() {
         <section className="docs-landing__section docs-landing__community" aria-labelledby="community-heading">
           <h2 id="community-heading" className="docs-landing__section-title">Become part of the community</h2>
           <p className="docs-landing__body docs-landing__community-intro">
-            EthioWDS is an open-source community of designers and developers building digital services for Ethiopia. Contributors support government sites, civic tech, and public-sector projects.
+            EthioWDS is an open-source community building digital services for Ethiopia. Contributors support government sites, civic tech, and public-sector projects.
           </p>
           <div className="docs-landing__community-grid">
             <div className="docs-landing__community-item">

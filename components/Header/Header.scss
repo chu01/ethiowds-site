@@ -31,18 +31,21 @@
     .logo-text {
       display: flex;
       flex-direction: column;
-      line-height: 1;
+      line-height: 1.2;
+      gap: 0.125rem;
     }
     
     .logo-primary {
       font-size: 1.25rem;
+      font-weight: 700;
       color: #333;
     }
     
     .logo-secondary {
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       color: #666;
-      font-weight: normal;
+      font-weight: 500;
+      letter-spacing: 0.02em;
     }
   }
 }

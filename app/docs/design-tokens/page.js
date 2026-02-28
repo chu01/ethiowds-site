@@ -11,7 +11,7 @@ export default function DesignTokensPage() {
       <section className="docs-section">
         <h2>Overview</h2>
         <p>
-          Design tokens are named variables that define the design decisions of the system. They are available as CSS custom properties (variables) and can be overridden for theming.
+          Design tokens are named variables that define the design decisions of the system. They can be overridden for theming.
         </p>
       </section>
 
@@ -22,14 +22,14 @@ export default function DesignTokensPage() {
           <li><Link href="/docs/typography">Typography</Link> — font families, sizes, weights, line heights</li>
           <li><Link href="/docs/spacing">Spacing</Link> — margins, padding, gaps</li>
           <li>Breakpoints — responsive breakpoints (see <Link href="/docs/breakpoints">Breakpoints</Link>)</li>
-          <li>Border radius, shadows, transitions — see component and theme CSS</li>
+          <li>Border radius, shadows, transitions — see component and theme documentation</li>
         </ul>
       </section>
 
       <section className="docs-section">
         <h2>Using Tokens</h2>
         <p>
-          Import the EthioWDS CSS to get all tokens. Override in your own CSS or via <Link href="/docs/theming">theming</Link> and <Link href="/docs/css-variables">CSS variables</Link>.
+          Add the design system to your project to get all tokens. Override in your own styles or via <Link href="/docs/theming">theming</Link> and <Link href="/docs/css-variables">custom properties</Link>.
         </p>
       </section>
     </div>

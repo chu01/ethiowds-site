@@ -21,31 +21,8 @@ export default function ColorsPage() {
 
       <section className="docs-section">
         <h2>Usage</h2>
-        <p>Use the color variables in your SCSS:</p>
-        <pre className="code-block">
-{`// In your SCSS file
-@use '@abiyub/ethiowds' as *;
-
-.my-component {
-  background: $primary;
-  color: white;
-  
-  &:hover {
-    background: darken($primary, 10%);
-  }
-}`}
-        </pre>
-
-        <p>Or use utility classes in your HTML:</p>
-        <pre className="code-block">
-{`<div class="ethio-bg-primary ethio-text-white">
-  This has a primary background
-</div>
-
-<button class="ethio-btn ethio-btn-secondary">
-  Secondary button
-</button>`}
-        </pre>
+        <p>Use the color variables in your project to keep backgrounds, text, and borders consistent with the design system. Override tokens to match your brand.</p>
+        <p>You can also use utility classes for quick styling—for example, primary or secondary backgrounds and text colors—without defining custom styles.</p>
       </section>
     </div>
   )

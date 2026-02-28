@@ -69,11 +69,11 @@ export default function SelectPage() {
           <div className="ethio-form-group">
             <label className="ethio-form-label">Select Multiple</label>
             <select className="ethio-form-select" multiple style={{ minHeight: '120px' }}>
-              <option>JavaScript</option>
-              <option>Python</option>
-              <option>Java</option>
-              <option>React</option>
-              <option>Vue</option>
+              <option>Option A</option>
+              <option>Option B</option>
+              <option>Option C</option>
+              <option>Option D</option>
+              <option>Option E</option>
             </select>
             <small>Hold Ctrl (or Cmd on Mac) to select multiple</small>
           </div>

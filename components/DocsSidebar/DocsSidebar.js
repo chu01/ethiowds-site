@@ -20,15 +20,13 @@ export default function DocsSidebar() {
       items: [
         { name: 'Introduction', path: '/docs' },
         { name: 'Installation', path: '/docs/installation' },
-        { name: 'Quick Start', path: '/docs/quick-start' },
         { name: 'How to Use EthioWDS', path: '/docs/how-to-use-ethiowds' },
       ]
     },
     {
       title: 'Foundations',
-      firstPath: '/docs/design-principles',
+      firstPath: '/docs/colors',
       items: [
-        { name: 'Design Principles', path: '/docs/design-principles' },
         { name: 'Colors', path: '/docs/colors' },
         { name: 'Typography', path: '/docs/typography' },
         { name: 'Spacing', path: '/docs/spacing' },
@@ -49,9 +47,7 @@ export default function DocsSidebar() {
       firstPath: '/docs/accessibility',
       items: [
         { name: 'Accessibility', path: '/docs/accessibility' },
-        { name: 'Best Practices', path: '/docs/best-practices' },
         { name: 'Ethiopian Localization', path: '/docs/ethiopian-localization' },
-        { name: 'Performance', path: '/docs/performance' },
       ]
     },
     {

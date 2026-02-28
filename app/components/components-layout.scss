@@ -1,5 +1,21 @@
 @use '../styles/sidenav';
 
+// Accordion: only apply to package JS–driven accordions (data-accordion), which use [hidden]
+.ethio-accordion[data-accordion] .ethio-accordion-content:not([hidden]) {
+  padding: 1.5rem;
+  max-height: 1000px;
+}
+
+.eth-accordion__item--active .ethio-accordion-header {
+  background: var(--primary);
+  color: white;
+
+  .ethio-accordion-icon {
+    transform: rotate(180deg);
+    color: white;
+  }
+}
+
 // Components Layout Styles
 .components-page-container {
   min-height: 100vh;
