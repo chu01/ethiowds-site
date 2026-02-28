@@ -1,93 +1,85 @@
+import Link from 'next/link'
 import './about-layout.scss'
 
 export default function About() {
   return (
     <div className="about-page">
-      <h1>What is EthioWDS?</h1>
+      <h1>About EthioWDS</h1>
       <p className="lead">
-        The Ethiopian Web Design System (EthioWDS) is a design system for the Ethiopian government. 
-        It provides principles, guidance, and code to help teams create accessible, mobile-friendly 
-        government websites and digital services.
+        The Ethiopian Web Design System (EthioWDS) is a design system for Ethiopian government and public-sector digital services. 
+        It provides principles, guidance, and code to help teams build accessible, mobile-friendly websites that serve all Ethiopians.
       </p>
 
-      <section>
-        <h2>Our mission</h2>
+      <section id="mission" className="about-page__section" aria-labelledby="mission-heading">
+        <h2 id="mission-heading">Our mission</h2>
         <p>
           EthioWDS aims to make it easier to build accessible, mobile-friendly government websites 
-          for the Ethiopian people. We do this by providing principles, guidance, and code to help 
-          government teams deliver great digital experiences.
+          for the Ethiopian people. We do this by providing principles, guidance, and code so 
+          teams can deliver consistent, high-quality digital experiences.
         </p>
-        
         <blockquote>
           <p>
-            "To create consistent, accessible, and culturally relevant digital experiences 
-            that serve all Ethiopians."
+            To create consistent, accessible, and culturally relevant digital experiences 
+            that serve all Ethiopians.
           </p>
         </blockquote>
       </section>
 
-      <section>
-        <h2>Design principles</h2>
+      <section id="design-principles" className="about-page__section" aria-labelledby="principles-heading">
+        <h2 id="principles-heading">Design principles</h2>
         <p>
-          Our design principles guide our approach to creating digital services for the 
-          Ethiopian government:
+          Our design principles guide how we create digital services:
         </p>
-        
         <ul>
           <li>
-            <strong>Accessibility first:</strong> We prioritize accessibility to ensure 
-            our digital services work for everyone, including people with disabilities.
+            <strong>Accessibility first:</strong> We prioritize accessibility so digital services 
+            work for everyone, including people with disabilities.
           </li>
           <li>
-            <strong>Cultural relevance:</strong> Our designs reflect Ethiopian cultural 
-            heritage while maintaining modern usability standards.
+            <strong>Cultural relevance:</strong> Designs reflect Ethiopian cultural heritage 
+            while meeting modern usability standards.
           </li>
           <li>
-            <strong>Consistency:</strong> We provide consistent patterns and components 
-            to create cohesive experiences across government services.
+            <strong>Consistency:</strong> Consistent patterns and components create cohesive 
+            experiences across government services.
           </li>
           <li>
-            <strong>Simplicity:</strong> We strive for simplicity in both design and 
-            implementation to make our system easy to use and maintain.
+            <strong>Simplicity:</strong> We keep design and implementation simple so the system 
+            is easy to use and maintain.
           </li>
         </ul>
       </section>
 
-      <section>
-        <h2>What's included</h2>
+      <section id="whats-included" className="about-page__section" aria-labelledby="included-heading">
+        <h2 id="included-heading">What&apos;s included</h2>
         <p>
-          EthioWDS provides everything you need to create accessible, mobile-friendly 
-          government websites:
+          EthioWDS provides what you need to create accessible, mobile-friendly government websites:
         </p>
-        
         <ul>
-          <li>Design principles and guidelines</li>
+          <li>Design principles and guidance</li>
           <li>UI components and patterns</li>
-          <li>Utility classes for layout and spacing</li>
+          <li>Design tokens for colors, typography, and spacing</li>
           <li>Accessibility guidance</li>
-          <li>Implementation examples</li>
-          <li>Research and best practices</li>
+          <li>Ethiopian localization support</li>
+          <li>Documentation and examples</li>
         </ul>
       </section>
 
-      <section>
-        <h2>Get involved</h2>
+      <section id="get-involved" className="about-page__section" aria-labelledby="involved-heading">
+        <h2 id="involved-heading">Get involved</h2>
         <p>
-          EthioWDS is an open source project, and we welcome contributions from 
-          government employees, contractors, and the public. You can help us improve 
-          EthioWDS by:
+          EthioWDS is open source. We welcome contributions from government teams, contractors, and the public. 
+          You can help by:
         </p>
-        
         <ul>
-          <li>Reporting bugs or issues</li>
-          <li>Suggesting new features or components</li>
+          <li>Reporting bugs or suggesting improvements</li>
           <li>Contributing code or documentation</li>
-          <li>Sharing your research or user feedback</li>
+          <li>Sharing feedback or research</li>
         </ul>
-        
         <p>
-          Visit our <a href="/about/contributing" className="text-link">contributing guide</a> to learn more 
-          about how you can help improve EthioWDS.
+          <Link href="/docs/contributing" className="about-page__link">Contributing guide</Link>
+          {' · '}
+          <Link href="/docs/changelog" className="about-page__link">Changelog</Link>
         </p>
       </section>
     </div>
