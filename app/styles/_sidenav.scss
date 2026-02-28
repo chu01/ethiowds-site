@@ -1,0 +1,91 @@
+// USWDS-style side navigation (designsystem.digital.gov/components/side-navigation/)
+// Shared by docs and components sidebars. Use semantic markup: nav > ul.eth-sidenav.
+
+.eth-sidenav-wrapper {
+  width: 100%;
+  max-width: 280px;
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid var(--ethio-gray-200, #e5e7eb);
+  height: 100vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+}
+
+.eth-sidenav {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 0.9375rem;
+}
+
+.eth-sidenav__item {
+  margin: 0;
+  padding: 0;
+}
+
+.eth-sidenav__link {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--ethio-gray-900, #1a1a1a);
+  border-left: 3px solid transparent;
+  margin-left: 0;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    background-color: var(--ethio-gray-50, #f9fafb);
+    color: var(--ethio-gray-900, #1a1a1a);
+  }
+
+  &:focus {
+    outline: 2px solid var(--primary, #078930);
+    outline-offset: 2px;
+  }
+}
+
+.eth-sidenav__link--current {
+  font-weight: 600;
+  border-left-color: var(--primary, #078930);
+  color: var(--primary, #078930);
+  background-color: var(--ethio-gray-50, #f9fafb);
+}
+
+.eth-sidenav__sublist {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.5rem 0;
+  border-left: 1px solid var(--ethio-gray-200, #e5e7eb);
+  margin-left: 1rem;
+}
+
+.eth-sidenav__sublist .eth-sidenav__item {
+  margin: 0;
+}
+
+.eth-sidenav__sublist .eth-sidenav__link {
+  padding: 0.35rem 1rem 0.35rem 0.75rem;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.eth-sidenav__sublist .eth-sidenav__link--current {
+  font-weight: 600;
+  border-left-color: var(--primary, #078930);
+  color: var(--primary, #078930);
+}
+
+// Scrollbar
+.eth-sidenav-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.eth-sidenav-wrapper::-webkit-scrollbar-track {
+  background: var(--ethio-gray-100, #f3f4f6);
+}
+
+.eth-sidenav-wrapper::-webkit-scrollbar-thumb {
+  background: var(--ethio-gray-300, #d1d5db);
+  border-radius: 3px;
+}

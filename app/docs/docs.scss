@@ -1,7 +1,201 @@
+@use '../styles/sidenav';
+
 .docs-container {
   // max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
+}
+
+// How to use EthioWDS landing (USWDS-style: designsystem.digital.gov/how-to-use-uswds/)
+.docs-landing {
+  max-width: 720px;
+}
+
+.docs-landing__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+  color: var(--ethio-gray-900, #1a1a1a);
+}
+
+.docs-landing__lead {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--ethio-gray-700, #374151);
+  margin: 0 0 2rem 0;
+}
+
+.docs-landing__section {
+  margin-bottom: 2.5rem;
+}
+
+.docs-landing__section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--ethio-gray-900, #1a1a1a);
+}
+
+.docs-landing__body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ethio-gray-700, #374151);
+  margin: 0 0 1rem 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: var(--primary, #078930);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.docs-landing__get-started {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.docs-landing__card {
+  display: block;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid var(--ethio-gray-200, #e5e7eb);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: var(--primary, #078930);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary, #078930);
+    outline-offset: 2px;
+  }
+}
+
+.docs-landing__card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--ethio-gray-900, #1a1a1a);
+}
+
+.docs-landing__card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ethio-gray-700, #374151);
+  margin: 0;
+}
+
+.docs-landing__concepts {
+  margin: 0 0 1rem 0;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ethio-gray-700, #374151);
+
+  li {
+    margin-bottom: 0.75rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: var(--primary, #078930);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.docs-landing__adopt-list {
+  margin: 0 0 1rem 0;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ethio-gray-700, #374151);
+
+  li {
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: var(--primary, #078930);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.docs-landing__community {
+  padding-top: 2rem;
+  border-top: 1px solid var(--ethio-gray-200, #e5e7eb);
+}
+
+.docs-landing__community-intro {
+  margin-bottom: 1.5rem !important;
+}
+
+.docs-landing__community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.docs-landing__community-item {
+  padding: 1rem;
+  background: var(--ethio-gray-50, #f9fafb);
+  border-radius: 8px;
+  border: 1px solid var(--ethio-gray-200, #e5e7eb);
+
+  p {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--ethio-gray-700, #374151);
+  }
+
+  a {
+    color: var(--primary, #078930);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.docs-landing__community-item-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--ethio-gray-900, #1a1a1a);
 }
 
 .docs-content {
@@ -152,6 +346,18 @@
   .docs-container {
     padding: 1rem;
   }
+
+  .docs-landing__title {
+    font-size: 1.75rem;
+  }
+
+  .docs-landing__get-started {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-landing__community-grid {
+    grid-template-columns: 1fr;
+  }
   
   .installation-step {
     flex-direction: column;
@@ -210,16 +416,18 @@
     flex-direction: column;
   }
   
-  .eth-sidebar {
+  .eth-sidenav-wrapper {
     position: fixed;
     left: -100%;
     top: 0;
     z-index: 50;
-    width: 280px;
+    max-width: 280px;
+    width: 100%;
     transition: left 0.3s ease;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
   }
-  
-  .eth-sidebar.mobile-open {
+
+  .eth-sidenav-wrapper.mobile-open {
     left: 0;
   }
   

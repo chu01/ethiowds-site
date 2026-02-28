@@ -102,26 +102,26 @@
 }
 
 @media (max-width: 768px) {
-  .eth-sidebar {
+  .eth-sidenav-wrapper {
     position: fixed;
     left: -100%;
     top: 0;
-    z-index: 50; // Below header nav but above content
+    z-index: 50;
+    max-width: 280px;
+    width: 100%;
     transition: left 0.3s ease;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-    height: 100vh;
   }
 
-  .eth-sidebar.mobile-open {
+  .eth-sidenav-wrapper.mobile-open {
     left: 0;
   }
-  
+
   .docs-layout {
     position: relative;
   }
-  
-  // Add overlay when sidebar is open
-  .docs-layout::before {
+
+  .docs-layout.sidebar-open::before {
     content: '';
     position: fixed;
     top: 0;
@@ -130,10 +130,5 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 45;
-    display: none;
-  }
-  
-  .docs-layout.sidebar-open::before {
-    display: block;
   }
 }

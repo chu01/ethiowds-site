@@ -1,88 +1,117 @@
 import Link from 'next/link'
 import './docs.scss'
 
-export default function DocsIntroduction() {
+export default function DocsLandingPage() {
   return (
-    <div className="docs-container">
+    <div className="docs-container docs-landing">
       <div className="docs-content">
-        <h1>EthioWDS Documentation</h1>
-        <p className="lead">
-          A comprehensive design system and component library built specifically for Ethiopian digital products, 
-          focusing on accessibility, cultural relevance, and modern web standards.
+        <h1 className="docs-landing__title">How to use EthioWDS</h1>
+        <p className="docs-landing__lead">
+          EthioWDS provides principles, guidance, and code to help you design and build accessible, mobile-friendly government websites and digital services for Ethiopia.
         </p>
 
-        <div className="docs-grid">
-          <div className="docs-card">
-            <div className="docs-card-icon">🎯</div>
-            <h3>Ethiopian Focused</h3>
-            <p>Designed with Ethiopian languages, cultural patterns, and user behaviors in mind.</p>
-          </div>
-          
-          <div className="docs-card">
-            <div className="docs-card-icon">♿</div>
-            <h3>Accessible</h3>
-            <p>WCAG 2.1 compliant components that work for all users, including those with disabilities.</p>
-          </div>
-          
-          <div className="docs-card">
-            <div className="docs-card-icon">⚡</div>
-            <h3>Modern & Fast</h3>
-            <p>Built with modern React, TypeScript, and optimized for performance.</p>
-          </div>
-        </div>
-
-        <h2>Getting Started</h2>
-        <p>
-          Choose your path to start using EthioWDS in your project:
-        </p>
-
-        <div className="cta-cards">
-          <Link href="/docs/installation" className="cta-card">
-            <h3>Quick Installation</h3>
-            <p>Get started immediately with our installation guide</p>
-            <span className="cta-arrow">→</span>
-          </Link>
-          
-          <Link href="/components" className="cta-card">
-            <h3>Browse Components</h3>
-            <p>Explore all available components and their usage</p>
-            <span className="cta-arrow">→</span>
-          </Link>
-          
-          <Link href="/docs/how-to-use-ethiowds" className="cta-card">
-            <h3>Learn Basics</h3>
-            <p>Understand the fundamentals and best practices</p>
-            <span className="cta-arrow">→</span>
-          </Link>
-        </div>
-
-        <h2>What's Included</h2>
-        <ul>
-          <li><strong>40+ React Components</strong> - Pre-built, accessible UI components</li>
-          <li><strong>Ethiopian Typography</strong> - Support for Amharic and other local languages</li>
-          <li><strong>Cultural Color Palette</strong> - Colors inspired by Ethiopian heritage</li>
-          <li><strong>Responsive Layouts</strong> - Mobile-first responsive design system</li>
-          <li><strong>Accessibility Features</strong> - Full keyboard navigation and screen reader support</li>
-          <li><strong>Customization</strong> - Easy theming and customization options</li>
-        </ul>
-
-        <div className="docs-next-steps">
-          <h3>Next Steps</h3>
-          <div className="next-steps-grid">
-            <Link href="/docs/installation" className="next-step-card">
-              <h4>Installation Guide</h4>
-              <p>Learn how to install and set up EthioWDS in your project</p>
+        {/* Get started with EthioWDS */}
+        <section className="docs-landing__section" aria-labelledby="get-started-heading">
+          <h2 id="get-started-heading" className="docs-landing__section-title">Get started with EthioWDS</h2>
+          <div className="docs-landing__get-started">
+            <Link href="/docs/installation" className="docs-landing__card">
+              <h3 className="docs-landing__card-title">Developers</h3>
+              <p className="docs-landing__card-desc">
+                Get started with our code base by installing the package with npm and following the installation guide.
+              </p>
             </Link>
-            <Link href="/docs/design-principles" className="next-step-card">
-              <h4>Design Principles</h4>
-              <p>Understand the philosophy behind EthioWDS</p>
+            <Link href="/docs/guidance" className="docs-landing__card">
+              <h3 className="docs-landing__card-title">Designers</h3>
+              <p className="docs-landing__card-desc">
+                Use our design principles, colors, typography, and spacing tokens for wireframes and prototypes.
+              </p>
             </Link>
-            <Link href="/components/button" className="next-step-card">
-              <h4>First Component</h4>
-              <p>Start with the Button component basics</p>
+            <Link href="/docs/how-to-use-ethiowds" className="docs-landing__card">
+              <h3 className="docs-landing__card-title">Documentation</h3>
+              <p className="docs-landing__card-desc">
+                Find detailed information about our design and development processes and how to use the system.
+              </p>
             </Link>
           </div>
-        </div>
+        </section>
+
+        {/* Before getting started */}
+        <section className="docs-landing__section" aria-labelledby="before-getting-started-heading">
+          <h2 id="before-getting-started-heading" className="docs-landing__section-title">Before getting started with EthioWDS</h2>
+          <p className="docs-landing__body">
+            EthioWDS includes accessible, mobile-friendly components out of the box, ensuring consistency and saving teams the need to build everything from scratch for government and public-sector web projects in Ethiopia.
+          </p>
+          <p className="docs-landing__body">
+            EthioWDS also provides tools and guidance—including design tokens for colors and typography, Amharic and local language support, and components built for accessibility—to make it easier to deliver inclusive digital services that meet user needs and align with emerging Ethiopian digital standards.
+          </p>
+        </section>
+
+        {/* Key concepts and tools */}
+        <section className="docs-landing__section" aria-labelledby="key-concepts-heading">
+          <h2 id="key-concepts-heading" className="docs-landing__section-title">Key concepts and tools</h2>
+          <p className="docs-landing__body">
+            You don&apos;t need to understand the following concepts to install the design system, but you will need to know them to build with it:
+          </p>
+          <ul className="docs-landing__concepts">
+            <li><strong>Design tokens:</strong> Design tokens are predefined units of color, spacing, typography, and more that form the building blocks of the design system. See <Link href="/docs/design-tokens">Design tokens</Link> and <Link href="/docs/colors">Colors</Link>, <Link href="/docs/typography">Typography</Link>, <Link href="/docs/spacing">Spacing</Link>.</li>
+            <li><strong>Components:</strong> Components are simple, consistent solutions to common user interface needs, like buttons, forms, and navigation. If tokens are the building blocks of the design system, components are the building blocks of a site or service. Browse <Link href="/components">Components</Link>.</li>
+            <li><strong>Utilities:</strong> Utilities are single-purpose classes mapped to EthioWDS tokens. They let you prototype and style layouts without writing custom CSS. See <Link href="/docs/utilities/display">Display</Link>, <Link href="/docs/utilities/colors">Colors</Link>, <Link href="/docs/utilities/spacing">Spacing</Link>.</li>
+            <li><strong>Guidance:</strong> Our guidance covers design principles, accessibility, and best practices so components behave the way users expect. See <Link href="/docs/guidance">Guidance</Link> and <Link href="/docs/accessibility">Accessibility</Link>.</li>
+          </ul>
+          <p className="docs-landing__body">
+            We&apos;ve created these resources to help designers and developers start quickly and use a shared language when customizing and updating content. The EthioWDS community is also a resource—reach out with questions or ideas before, during, or after getting started.
+          </p>
+        </section>
+
+        {/* Adopt EthioWDS incrementally */}
+        <section className="docs-landing__section" aria-labelledby="adopt-incrementally-heading">
+          <h2 id="adopt-incrementally-heading" className="docs-landing__section-title">Adopt EthioWDS incrementally</h2>
+          <p className="docs-landing__body">
+            EthioWDS helps Ethiopian government and public-sector teams design and build better digital experiences. As a toolkit for government and civic websites, the design system provides:
+          </p>
+          <ol className="docs-landing__adopt-list">
+            <li><strong>Principles:</strong> EthioWDS design principles support consistency, accessibility, and Ethiopian identity. See <Link href="/docs/guidance">Guidance</Link>.</li>
+            <li><strong>Guidance:</strong> UX and content guidance helps ensure components do what users expect. See <Link href="/docs/guidance">Guidance</Link>.</li>
+            <li><strong>Code:</strong> EthioWDS code provides an accessible, mobile-friendly experience. Teams can extend and contribute back. See <Link href="/docs/installation">Installation</Link> and <Link href="/docs/contributing">Contributing</Link>.</li>
+          </ol>
+          <p className="docs-landing__body">
+            The design system is flexible—we expect you to adapt it as you adopt it. Start by applying our design principles, then add tokens and components incrementally to best meet your agency&apos;s or project&apos;s needs.
+          </p>
+        </section>
+
+        {/* Latest updates */}
+        <section className="docs-landing__section" aria-labelledby="latest-updates-heading">
+          <h2 id="latest-updates-heading" className="docs-landing__section-title">Latest updates</h2>
+          <p className="docs-landing__body">
+            Meaningful code and documentation updates are listed in the changelog. For the full release history, see <Link href="/docs/changelog">Changelog</Link> and the project&apos;s <a href="https://github.com/chu01/ethioWDS/releases" target="_blank" rel="noopener noreferrer">releases on GitHub</a>.
+          </p>
+        </section>
+
+        {/* Become part of the community */}
+        <section className="docs-landing__section docs-landing__community" aria-labelledby="community-heading">
+          <h2 id="community-heading" className="docs-landing__section-title">Become part of the community</h2>
+          <p className="docs-landing__body docs-landing__community-intro">
+            EthioWDS is an open-source community of designers and developers building digital services for Ethiopia. Contributors support government sites, civic tech, and public-sector projects.
+          </p>
+          <div className="docs-landing__community-grid">
+            <div className="docs-landing__community-item">
+              <h3 className="docs-landing__community-item-title">Have an idea or an issue?</h3>
+              <p><a href="https://github.com/chu01/ethioWDS/issues" target="_blank" rel="noopener noreferrer">Reach out on GitHub</a></p>
+            </div>
+            <div className="docs-landing__community-item">
+              <h3 className="docs-landing__community-item-title">Engage with the community</h3>
+              <p><a href="https://github.com/chu01/ethioWDS/discussions" target="_blank" rel="noopener noreferrer">GitHub Discussions</a></p>
+            </div>
+            <div className="docs-landing__community-item">
+              <h3 className="docs-landing__community-item-title">Contribute</h3>
+              <p><Link href="/docs/contributing">Contributing guide</Link></p>
+            </div>
+            <div className="docs-landing__community-item">
+              <h3 className="docs-landing__community-item-title">Get support</h3>
+              <p><a href="https://github.com/chu01/ethioWDS" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   )

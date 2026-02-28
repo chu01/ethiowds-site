@@ -1,7 +1,177 @@
+@use '../styles/sidenav';
+
 // Components Layout Styles
 .components-page-container {
   min-height: 100vh;
   background-color: var(--ethio-gray-50);
+}
+
+// USWDS-style Components Overview (designsystem.digital.gov/components/overview)
+.components-overview {
+  .components-overview__header {
+    margin-bottom: 2rem;
+  }
+
+  .components-overview__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+    color: var(--ethio-gray-900, #1a1a1a);
+  }
+
+  .components-overview__lead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--ethio-gray-700, #374151);
+    margin: 0;
+  }
+
+  .components-overview__find {
+    margin-bottom: 2rem;
+  }
+
+  .components-overview__find-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: var(--ethio-gray-900, #1a1a1a);
+  }
+
+  .components-overview__find-hint {
+    font-size: 0.875rem;
+    color: var(--ethio-gray-600, #4b5563);
+    margin: 0 0 0.75rem 0;
+  }
+
+  .components-overview__filter {
+    display: block;
+    width: 100%;
+    max-width: 24rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid var(--ethio-gray-300, #d1d5db);
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    background: #fff;
+
+    &:focus {
+      outline: 2px solid var(--primary, #078930);
+      outline-offset: 2px;
+      border-color: var(--primary, #078930);
+    }
+
+    &::placeholder {
+      color: var(--ethio-gray-500, #6b7280);
+    }
+  }
+
+  .components-overview__count {
+    font-size: 0.875rem;
+    color: var(--ethio-gray-700, #374151);
+    margin: 0 0 0.5rem 0;
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  .components-overview__packages-note {
+    font-size: 0.875rem;
+    color: var(--ethio-gray-600, #4b5563);
+    margin: 0 0 1.5rem 0;
+
+    a {
+      color: var(--primary, #078930);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .components-overview__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem 0;
+  }
+
+  .components-overview__card {
+    display: block;
+    padding: 1.25rem;
+    background: #fff;
+    border: 1px solid var(--ethio-gray-200, #e5e7eb);
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      border-color: var(--primary, #078930);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--primary, #078930);
+      outline-offset: 2px;
+    }
+  }
+
+  .components-overview__card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: var(--ethio-gray-900, #1a1a1a);
+  }
+
+  .components-overview__card-description {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--ethio-gray-700, #374151);
+    margin: 0;
+  }
+
+  .components-overview__no-results {
+    padding: 2rem;
+    text-align: center;
+    color: var(--ethio-gray-600, #4b5563);
+    margin: 0 0 2rem 0;
+  }
+
+  .components-overview__cta {
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid var(--ethio-gray-200, #e5e7eb);
+    border-radius: 8px;
+    text-align: center;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+      color: var(--ethio-gray-900, #1a1a1a);
+    }
+
+    p {
+      font-size: 1rem;
+      color: var(--ethio-gray-700, #374151);
+      margin: 0 0 1.5rem 0;
+      line-height: 1.6;
+    }
+  }
+
+  .components-overview__cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
 }
 
 .components-layout-inner {
@@ -328,44 +498,6 @@
     flex-direction: column;
     align-items: center;
   }
-}
-
-// Enhanced sidebar styles
-.eth-sidebar {
-  background: white;
-  border-right: 1px solid var(--ethio-gray-200);
-  height: 100vh;
-  overflow-y: auto;
-  position: sticky;
-  top: 0;
-}
-
-.eth-sidebar__item {
-  transition: all 0.2s ease;
-  
-  &:hover {
-    background-color: var(--ethio-gray-100);
-  }
-}
-
-.eth-sidebar__item--active {
-  background-color: rgba(7, 137, 48, 0.1);
-  color: var(--primary);
-  font-weight: 600;
-}
-
-// Scrollbar styling
-.eth-sidebar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.eth-sidebar::-webkit-scrollbar-track {
-  background: var(--ethio-gray-100);
-}
-
-.eth-sidebar::-webkit-scrollbar-thumb {
-  background: var(--ethio-gray-400);
-  border-radius: 2px;
 }
 
 // Simple Header Styles
